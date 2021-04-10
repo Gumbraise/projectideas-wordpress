@@ -51,7 +51,7 @@ function projectideas_style() {
 
 add_action( 'wp_enqueue_scripts', 'projectideas_style' );
 
-function double6_scripts() {
+function projectideas_scripts() {
 	wp_enqueue_script( 'script-jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), false, true );
 	wp_enqueue_script( 'script-bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js', array(), false, true );
 	wp_enqueue_script( 'script-baguettebox', 'https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js', array(), false, true );
@@ -59,6 +59,6 @@ function double6_scripts() {
 	wp_enqueue_script( 'script-default', get_template_directory_uri() . '/assets/js/theme.js', array(), false, true );
 }
 
-add_action( 'wp_enqueue_scripts', 'double6_scripts' );
+add_action( 'wp_enqueue_scripts', 'projectideas_scripts' );
 
 add_filter( 'show_admin_bar', '__return_false' );
