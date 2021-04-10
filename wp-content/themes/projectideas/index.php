@@ -15,7 +15,7 @@ get_header();
                             <div class="row">
                                 <div class="col-12">
                                     <form action="find.html">
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        <input type="text" class="form-control"
                                                placeholder="Mod Spigot...">
                                     </form>
                                 </div>
