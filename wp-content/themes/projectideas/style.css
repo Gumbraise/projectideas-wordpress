@@ -1,3 +1,112 @@
-/**
-Nothing here.
- */
+* {
+    color: #262E2D
+}
+.bg-white {
+    background-color: #4B327D !important;
+}
+
+.nav-link {
+    color: #F4F4F4 !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    color: #F4F4F4 !important;
+}
+
+.page-footer.dark {
+    background-color: #4B327D !important;
+}
+
+.footer-copyright {
+    background: #4B327D !important;
+    border-color: #4B327D !important;
+}
+
+.ml-auto, .mx-auto {
+    margin-right: auto!important;
+    margin-left: 0;
+}
+
+.navbar.navbar-light.navbar-expand-md.navigation-clean-button {
+    background-color: #4B327D !important;
+}
+
+.navbar-light .navbar-text a, .navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover {
+    color: #F4F4F4;
+}
+
+.text-info {
+    color: #4B327D !important;
+}
+
+.clean-block.clean-form form {
+    border-top: 2px solid #4B327D;
+    background-color: #fff;
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.075);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #4B327D;
+    border-color: #4B327D;
+}
+
+.btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+    color: #fff;
+    background-color: #4B327D;
+    border-color: #4B327D;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem #4B327D50;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 .2rem #4B327D50;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4B327D;
+    border-color: #4B327D;
+}
+div.image img {
+    border-radius: 50%;
+    width: 75px
+}
+.not p {
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: none
+}
+p span {
+    color: #384040
+}
+.violet {
+    color: #fff;
+    background-color: #4B327D;
+    border-color: #4B327D;
+}
+.text *{
+    color: #f4f4f4;
+}
+.box {
+    border: solid 1px #262E2D;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box * {
+    color: #262E2D
+}
+html, body{
+    background-color: #4B327D
+}
