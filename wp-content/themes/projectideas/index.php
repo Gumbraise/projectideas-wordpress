@@ -14,10 +14,12 @@ get_header();
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <form action="find.html">
+                                    <form action="find.html" class="homepage">
                                         <input type="text" class="form-control"
                                                placeholder="Mod Spigot...">
+                                        <button class="button"><i class="fas fa-search"></i></button>
                                     </form>
+
                                 </div>
                             </div>
                         </div>

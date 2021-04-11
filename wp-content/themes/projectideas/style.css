@@ -157,10 +157,44 @@ html, body {
     top: 25%;
     transform: translate(-50%, -50%);
 }
-
-input.form-control {
+form.homepage {
     margin-top: 30px;
+    position: relative;
+}
+input.form-control {
     padding: 25px .75rem;
     border-radius: 50px;
-    border-collapse: separate;
+    position: absolute;
+
+}
+button.button {
+    position: absolute;
+    padding: 25px;
+    border-radius: 500px;
+    height: 52px;
+    width: 52px;
+    right: 0;
+    border: none;
+    background-color: #6545ab;
+    box-shadow: 0px 0px 10px #00000077;
+    transition: .2s;
+}
+button.button:hover {
+    background-color: #4B327D;
+}
+button.button i {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    opacity: 1;
+    transition: .2s;
+
 }

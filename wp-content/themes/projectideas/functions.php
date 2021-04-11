@@ -42,6 +42,7 @@ function projectideas_style() {
 	wp_enqueue_style( 'style-font-montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900' );
 
 	wp_enqueue_style( 'style-baguettebox', 'https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css' );
+	wp_enqueue_style( 'style-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' );
 
 	wp_enqueue_style( 'style-bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_style( 'style-navigation-with-button', get_template_directory_uri() . '/assets/css/Navigation-with-Button.css' );
