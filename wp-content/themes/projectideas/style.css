@@ -30,6 +30,7 @@
 
 .navbar.navbar-light.navbar-expand-md.navigation-clean-button {
     background-color: #4B327D !important;
+    z-index: 9999
 }
 
 .navbar-light .navbar-text a, .navbar-light .navbar-text a:focus, .navbar-light .navbar-text a:hover {
@@ -147,11 +148,12 @@ html, body {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 100%;
 }
 
 .main-banner .caption {
     text-align: center;
-    position: absolute;
+    position: relative;
     width: 80%;
     left: 50%;
     top: 25%;
@@ -196,5 +198,24 @@ button.button i {
     margin: auto;
     opacity: 1;
     transition: .2s;
+}
 
+section {
+    padding: 50px 30px 300px 30px;
+}
+section.courses {
+    background-image: url(assets/img/tech/image4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+}
+.section-heading {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.cards-homepage {
+    top: -200px;
+    position: relative
 }
