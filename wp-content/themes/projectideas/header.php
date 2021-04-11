@@ -12,7 +12,8 @@
 <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
     <div class="container">
         <a href="index.html">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tech/ProjectIdeas1.svg" style="height: 40px;"/>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tech/ProjectIdeas1.svg"
+                 style="height: 40px;"/>
         </a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
             <span class="sr-only">Toggle navigation</span>
