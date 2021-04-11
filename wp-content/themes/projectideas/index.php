@@ -64,6 +64,22 @@ get_header();
                 </div>
             </div>
 
+                <div class="container news">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">Denières idées <sup>(actualisé toutes les 10 secondes)</sup>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
+                                    <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
+                                        1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
+                                        au personnes qualifiées pour...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
 
     </main>
