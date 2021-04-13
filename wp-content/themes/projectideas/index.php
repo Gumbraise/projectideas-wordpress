@@ -30,7 +30,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section style="padding-bottom: 50px" class="background-icons">
+        <section style="padding-bottom: 0" class="background-icons">
             <div class="container cards-homepage">
                 <div class="row">
                         <div class="owl-carousel">

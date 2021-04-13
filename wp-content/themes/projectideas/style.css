@@ -256,14 +256,14 @@ section.courses {
 }
 
 .news {
-
     top: -180px;
     position: relative;
-    height: 100px
 }
+
 .owl-stage {
     padding: 40px
 }
+
 .background-icons {
     background: url(assets/img/bc.svg) /*repeat center center fixed !important*/;
     background-repeat: no-repeat;
