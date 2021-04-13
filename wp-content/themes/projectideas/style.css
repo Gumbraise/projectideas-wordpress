@@ -247,11 +247,24 @@ section.courses {
     top: -200px;
     position: relative
 }
-
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
 .card {
-    background-image: linear-gradient(45deg, #4b4177, var(--violet-lb));
+    background-image: linear-gradient(45deg, #4b4177, var(--violet-lb), #4b4177);
     border: none;
     box-shadow: 0 0 20px #00000055;
+
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
 }
 
 .card-header {
