@@ -30,11 +30,11 @@ get_header();
                 </div>
             </div>
         </section>
-        <section style="padding-bottom: 50px">
-            <div class="container-fluid">
-                <div class="container cards-homepage">
-                    <div class="row">
+        <section style="padding-bottom: 50px" class="background-icons">
+            <div class="container cards-homepage">
+                <div class="row">
                         <div class="owl-carousel">
+
                             <div class="card">
                                 <div class="card-header">Idée du jour</div>
                                 <div class="card-body">
@@ -63,21 +63,20 @@ get_header();
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
-                <div class="container news">
-                    <div class="row">
-                            <div class="card">
-                                <div class="card-header">Denières idées <sup>(actualisé toutes les 10 secondes)</sup>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
-                                    <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
-                                        1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
-                                        au personnes qualifiées pour...</p>
-                                </div>
-                            
+            </div>
+            <div class="container news">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-header">Denières idées <sup>(actualisé toutes les 10 secondes)</sup>
                         </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
+                            <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
+                                1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
+                                au personnes qualifiées pour...</p>
+                        </div>
+
                     </div>
                 </div>
         </section>

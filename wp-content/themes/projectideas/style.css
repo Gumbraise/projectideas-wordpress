@@ -26,6 +26,8 @@
 
 .page-footer.dark {
     background-color: var(--violet-lb);
+    width: 100%;
+    box-shadow: 0 -15px 30px -15px rgba(0, 0, 0, .75);
 }
 
 .footer-copyright {
@@ -78,6 +80,10 @@
 
 .btn-primary.focus, .btn-primary:focus {
     box-shadow: 0 0 0 .2rem var(--violet-lb) 50;
+}
+
+.page-footer ul li::after, .page-footer ul li::before {
+    background-color: var(--violet-pb);
 }
 
 .btn-primary {
@@ -220,10 +226,11 @@ section {
 }
 
 section.courses {
-    background-image: url(assets/img/tech/image4.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #000000;
+    background: url(assets/img/tech/image4.jpg) repeat center center fixed !important;
+    /*background-image: url(assets/img/tech/image4.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-color: #000000;*/
 }
 
 .section-heading {
@@ -250,7 +257,15 @@ section.courses {
 
 .news {
 
-    top: -100px;
+    top: -180px;
     position: relative;
     height: 100px
+}
+.owl-stage {
+    padding: 40px
+}
+.background-icons {
+    background: url(assets/img/bc.svg) /*repeat center center fixed !important*/;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

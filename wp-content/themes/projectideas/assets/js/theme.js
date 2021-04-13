@@ -17,11 +17,13 @@ $('.owl-carousel').owlCarousel({
     margin: 20,
     dots: false,
     items: 3,
+    stagePadding: 40,
     responsive:{
         0:{
             items:1,
             autoplay: true,
-            autoplayTimeout: 3000
+            autoplayTimeout: 3000,
+            loop: true,
         },
         768:{
             items:3,
