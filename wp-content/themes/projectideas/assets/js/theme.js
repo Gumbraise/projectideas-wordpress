@@ -30,3 +30,32 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+//
+// $('.carousel-homepage').slick({
+//     speed: 300,
+//     slidesToShow: 3,
+//     slidesToScroll: 3,
+//     responsive: [
+//         {
+//             breakpoint: 768,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1
+//             }
+//         }
+//     ],
+//     centerMode: true,
+//
+//     variableWidth: true
+// });
+
+// var elms = document.getElementsByClassName('splide');
+// for (var i = 0, len = elms.length; i < len; i++) {
+//     new Splide(elms[i], {
+//         type: 'loop',
+//         padding: {
+//             right: '5rem',
+//             left: '5rem',
+//         },
+//     }).mount();
+// }
