@@ -33,36 +33,45 @@ get_header();
         <section style="padding-bottom: 0" class="background-icons">
             <div class="container cards-homepage">
                 <div class="row">
-                        <div class="owl-carousel">
+                    <div class="owl-carousel">
 
-                            <div class="card">
-                                <div class="card-header">Idée du jour</div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
-                                    <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
-                                        1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
-                                        au personnes qualifiées pour...</p>
-                                </div>
+                        <div class="card">
+                            <div class="card-header">Idée du jour</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
+                                <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
+                                    1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
+                                    au personnes qualifiées pour...</p>
                             </div>
-                            <div class="card">
-                                <div class="card-header">Idée du mois</div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
-                                    <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
-                                        1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
-                                        au personnes qualifiées pour...</p>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">Utilisateur de la semaine</div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Dark card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up the bulk of the card's content.</p>
-                                </div>
+                            <div class="card-footer">
+                                <a href="#" style="float: right">Voir plus &raquo;</a>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-header">Idée du mois</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
+                                <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
+                                    1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
+                                    au personnes qualifiées pour...</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" style="float: right">Voir plus &raquo;</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">Utilisateur de la semaine</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mod Minecraft Spigot 1.8.9</h5>
+                                <p class="card-text">Bonjour, j'ai l'idée de créer un mod Minecraft pour Spigot
+                                    1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
+                                    au personnes qualifiées pour...</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" style="float: right">Voir son profil &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="container news">
@@ -76,7 +85,9 @@ get_header();
                                 1.8.9 mais je n'en ai pas les compétances donc je viens ici pour donner l'idée
                                 au personnes qualifiées pour...</p>
                         </div>
-
+                        <div class="card-footer">
+                            <a href="#" style="float: right">Voir plus &raquo;</a>
+                        </div>
                     </div>
                 </div>
         </section>

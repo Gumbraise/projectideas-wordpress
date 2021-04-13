@@ -11,7 +11,10 @@
 * {
     color: var(--blanc-ct);
 }
-
+a {
+    color: var(--blanc-ct);
+    transition: .2s
+}
 .bg-white {
     background-color: var(--violet-lb) !important;
 }
@@ -274,5 +277,8 @@ section.courses {
     transition: .5s;
 }
 .owl-carousel .card:hover {
-    transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -3%, 0);
+}
+a:hover {
+    color: var(--violet-pb);
 }
