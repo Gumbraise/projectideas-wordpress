@@ -269,3 +269,10 @@ section.courses {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.owl-carousel .card {
+    transition: .5s;
+}
+.owl-carousel .card:hover {
+    transform: translate3d(0, -5%, 0);
+}
