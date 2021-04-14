@@ -265,10 +265,15 @@ section.courses {
 .card {
     background-image: linear-gradient(45deg, #4b4177, var(--violet-lb), #4b4177);
     border: none;
-    box-shadow: 0 0 20px #00000055;
 
+    transition: .5s;
+    box-shadow: 0 0 20px #00000022;
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px #00000055;
 }
 
 .card-header {
