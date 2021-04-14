@@ -11,10 +11,12 @@
 * {
     color: var(--blanc-ct);
 }
+
 a {
-    color: var(--blanc-ct);
+    color: #d2d1d1;
     transition: .2s
 }
+
 .bg-white {
     background-color: var(--violet-lb) !important;
 }
@@ -247,6 +249,7 @@ section.courses {
     top: -200px;
     position: relative
 }
+
 @keyframes Gradient {
     0% {
         background-position: 0% 50%
@@ -258,6 +261,7 @@ section.courses {
         background-position: 0% 50%
     }
 }
+
 .card {
     background-image: linear-gradient(45deg, #4b4177, var(--violet-lb), #4b4177);
     border: none;
@@ -289,15 +293,19 @@ section.courses {
 .owl-carousel .card {
     transition: .5s;
 }
+
 .owl-carousel .card:hover {
     transform: translate3d(0, -3%, 0);
 }
+
 a:hover {
-    color: var(--violet-pb);
+    color: var(--blanc);
 }
+
 input {
     color: var(--violet-pb) !important;
 }
+
 .form-control:focus {
     box-shadow: 0 0 0 .2rem rgba(142, 114, 175, 0.25);
     border-color: var(--violet-pb);
