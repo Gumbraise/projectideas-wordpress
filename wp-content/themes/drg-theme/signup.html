@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DRG | DevsAreGenius - Signup</title>
+    <link rel="icon" type="image/png" href="assets/img/tech/drg_logo.svg"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="assets/css/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+<div class="relative bg-purple-800 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+            <div class="flex justify-start lg:w-0 lg:flex-1">
+                <a href="/">
+                    <span class="sr-only">DRG</span>
+                    <img class="h-8 w-auto sm:h-10 hidden md:flex" src="assets/img/tech/drg_header_alt.svg" alt="DRG">
+                    <img class="h-8 w-auto sm:h-10 flex md:hidden" src="assets/img/tech/drg_logo.svg" alt="DRG">
+                </a>
+            </div>
+            <div class="-mr-2 -my-2 md:hidden">
+                <button onclick="toggleNavbar('md');"
+                        type="button"
+                        class="bg-purple-900 rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-900"
+                        aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-10">
+                <a href="post.html"
+                   class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+                    Post an idea
+                </a>
+                <a href="find.html"
+                   class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+                    Find an idea
+                </a>
+                <a href="contact-us.html"
+                   class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+                    Become certified
+                </a>
+            </nav>
+            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                <a href="signin.html"
+                   class="hover:bg-purple-700 text-white px-3 py-2 rounded-md text-base font-medium">
+                    Sign in
+                </a>
+                <a href="signup.html"
+                   class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
+                    Sign up
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="md" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden md:hidden">
+        <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-purple-800 divide-y-2 divide-gray-50">
+            <div class="pt-5 pb-6 px-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <img class="h-8 w-auto" src="assets/img/tech/drg_logo.svg"
+                             alt="DRG">
+                    </div>
+                    <div class="-mr-2">
+                        <button onclick="toggleNavbar('md');"
+                                type="button"
+                                class="bg-purple-900 rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-900">
+                            <span class="sr-only">Close menu</span>
+                            <!-- Heroicon name: outline/x -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="py-6 px-5 space-y-6">
+                <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+                    <a href="post.html"
+                       class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
+                        Post an idea
+                    </a>
+
+                    <a href="find.html"
+                       class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
+                        Find an idea
+                    </a>
+
+                    <a href="contact-us.html"
+                       class="col-span-2 text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
+                        Become certified
+                    </a>
+
+                </div>
+                <div>
+                    <a href="signup.html"
+                       class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
+                        Sign up
+                    </a>
+                    <p class="mt-6 text-center text-base font-medium text-gray-300">
+                        You already have an account ?
+                        <a href="signin.html" class="text-purple-400 hover:text-purple-300">
+                            Sign in
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<main>
+    <section class="relative w-full h-screen flex content-center items-center justify-center" style="min-height: 75vh;">
+        <div
+                class="absolute top-0 w-full h-full bg-center bg-cover"
+                style="background-image: url(./assets/img/tech/image4.jpg);"
+        >          <span
+                id="blackOverlay"
+                class="w-full h-full absolute opacity-50 bg-black"
+        ></span>
+        </div>
+        <div class="container mx-auto px-4 h-full">
+            <div class="flex content-center items-center justify-center h-full">
+                <div class="w-full lg:w-4/12 px-4">
+                    <div
+                            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-200 border-0"
+                    >
+                        <div class="rounded-t mb-0 px-6 py-6">
+                            <div class="text-center mb-3">
+                                <img src="assets/img/tech/drg_header_dark_alt.svg" alt="DRG Header"
+                                     class="w-64 block m-auto">
+                            </div>
+                            <hr class="mt-6 border-b-1 border-gray-400"/>
+                        </div>
+                        <div class="flex-auto px-4 lg:px-10 py-10 pt-0 py-12">
+                            <form>
+
+                                <label
+                                        class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                        for="grid-password"
+                                >Username</label
+                                >
+                                <div class="relative flex w-full flex-wrap items-stretch w-full mb-3">
+                                    <div class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                                        <i class="fas fa-user text-purple-500"></i>
+                                    </div>
+                                    <input
+                                            type="text"
+                                            class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
+                                            placeholder="Username"
+                                            style="transition: all 0.15s ease 0s;"
+                                            required
+                                    />
+                                </div>
+
+                                <label
+                                        class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                        for="grid-password"
+                                >Email</label
+                                >
+                                <div class="relative flex w-full flex-wrap items-stretch w-full mb-3">
+                                    <div class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                                        <i class="fas fa-envelope text-purple-500"></i>
+                                    </div>
+                                    <input
+                                            type="email"
+                                            class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
+                                            placeholder="Email"
+                                            style="transition: all 0.15s ease 0s;"
+                                            required
+                                    />
+                                </div>
+
+                                <label
+                                        class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                        for="grid-password"
+                                >Password</label
+                                >
+                                <div class="relative flex w-full flex-wrap items-stretch w-full mb-3">
+                                    <div class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                                        <i class="fas fa-lock text-purple-500"></i>
+                                    </div>
+                                    <input
+                                            type="password"
+                                            class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
+                                            placeholder="Password"
+                                            style="transition: all 0.15s ease 0s;"
+                                            required
+                                    />
+                                </div>
+                                <label
+                                        class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                        for="grid-password"
+                                >Repeat the password</label
+                                >
+                                <div class="relative flex w-full flex-wrap items-stretch w-full mb-3">
+                                    <div class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                                        <i class="fas fa-lock text-purple-500"></i>
+                                    </div>
+                                    <input
+                                            type="password"
+                                            class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
+                                            placeholder="Repeat the password"
+                                            style="transition: all 0.15s ease 0s;"
+                                            required
+                                    />
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="w-full block text-center transition duration-200 bg-purple-900 text-gray-300 shadow hover:shadow-lg outline-none focus:outline-none uppercase hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded items-center">
+                                        Sign up
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="flex flex-wrap mt-6">
+                                <div class="w-1/2">
+                                    <a href="#" class="text-gray-700"
+                                    ><small>Forgot password?</small></a
+                                    >
+                                </div>
+                                <div class="w-1/2 text-right">
+                                    <a href="signup.html" class="text-gray-700"
+                                    ><small>Sign in to your account</small></a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="relative bg-gray-200 pt-8 pb-6 shadow-2xl">
+    <div
+            class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+            style="height: 80px;"
+    >
+        <svg
+                class="absolute bottom-0 overflow-hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                version="1.1"
+                viewBox="0 0 2560 100"
+                x="0"
+                y="0"
+        >
+            <polygon
+                    class="text-gray-200 fill-current"
+                    points="2560 0 2560 100 0 100"
+            ></polygon>
+        </svg>
+    </div>
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4">
+                <span class="sr-only">DRG</span>
+                <img src="assets/img/tech/drg_header_dark_alt.svg" alt="DRG logo" class="w-72">
+                <h5 class="text-lg mt-0 mb-2 text-gray-700">
+                    Collection of ideas for genius developers.
+                </h5>
+                <div class="my-6">
+                    <a href="https://twitter.com/DevsAreGenius" target="_blank">
+                        <button
+                                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button"
+                        >
+                            <i class="flex fab fa-twitter"></i></button
+                        >
+                    </a>
+                    <a href="https://github.com/Gumbraise" target="_blank">
+                        <button
+                                class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button"
+                        >
+                            <i class="flex fab fa-github"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full lg:w-6/12">
+                <div class="flex flex-wrap items-top mb-6">
+                    <div class="w-full lg:w-4/12 px-4 ml-auto">
+                        <h6 class="block uppercase text-gray-600 text-sm font-semibold my-2">Useful Links</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="find.html"
+                                >All ideas</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="#"
+                                >Day idea</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="#"
+                                >Advanced search</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="#"
+                                >Search by user</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-4/12 px-4">
+                        <h6 class="block uppercase text-gray-600 text-sm font-bold my-2">Other Resources</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="#"
+                                >Privacy policy</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="#"
+                                >Terms &amp; Conditions</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="contact-us.html"
+                                >Report a bug</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="contact-us.html"
+                                >Contact Us</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-gray-400"/>
+        <div
+                class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                <div class="text-sm text-gray-600 font-semibold py-1">
+                    © 2021 ProjectIdeas
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    let transition = false;
+
+    function toggleNavbar(collapseID) {
+        if (transition) {
+            document.getElementById(collapseID).classList.remove("md-navbar-in");
+            document.getElementById(collapseID).classList.add("md-navbar-out");
+            setTimeout(() => {
+                document.getElementById(collapseID).classList.add("hidden")
+            }, 200)
+        } else {
+            document.getElementById(collapseID).classList.add("md-navbar-in");
+            document.getElementById(collapseID).classList.remove("md-navbar-out", "hidden");
+        }
+        transition = !transition
+    }
+</script>
+</body>
+
+</html>
