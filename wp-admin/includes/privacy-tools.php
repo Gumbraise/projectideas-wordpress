@@ -519,7 +519,7 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 			$error = __( 'Unable to archive the personal data export file (JSON format).' );
 		}
 
-		if ( ! $zip->addFile( $html_report_pathname, 'index.html' ) ) {
+		if ( ! $zip->addFile( $html_report_pathname, 'index.php' ) ) {
 			$error = __( 'Unable to archive the personal data export file (HTML format).' );
 		}
 
