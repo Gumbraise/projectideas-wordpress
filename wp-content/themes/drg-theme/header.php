@@ -29,7 +29,7 @@
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <a href="/">
-                    <span class="sr-only">DRG</span>
+                    <span class="sr-only">DevsAreGenius</span>
                     <img class="h-8 w-auto sm:h-10 hidden md:flex" src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_alt.svg'; ?>" alt="DevsAreGenius Logotype">
                     <img class="h-8 w-auto sm:h-10 flex md:hidden" src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_logo.svg'; ?>" alt="DevsAreGenius Mark">
                 </a>
@@ -93,8 +93,8 @@
             <div class="pt-5 pb-6 px-5">
                 <div class="flex items-center justify-between">
                     <div>
-                             alt="DRG">
                         <img class="h-8 w-auto" src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_logo.svg'; ?>"
+                             alt="DevsAreGenius Mark">
                     </div>
                     <div class="-mr-2">
                         <button onclick="toggleNavbar('md');"
