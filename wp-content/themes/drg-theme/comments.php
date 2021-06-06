@@ -66,3 +66,5 @@ $comment_count = get_comments_number() + 1;
                             </div>
                             <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
                                 <a href="<?php echo $comment->comment_author_url; ?>"><strong><?php echo $comment->comment_author; ?></strong></a>
+                                <span
+                                        class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $comment->comment_date ), ( time() + 7200 ) ) ?> ago</span>
