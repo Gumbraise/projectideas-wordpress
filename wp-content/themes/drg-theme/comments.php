@@ -164,6 +164,8 @@ $comment_count = get_comments_number() + 1;
 						array(
 							'logged_in_as'       => null,
 							'title_reply'        => esc_html__( 'Leave a comment', 'drg' ),
+							'title_reply_before' => '<h5 class="pb-2 text-gray-800 text-lg">',
+							'title_reply_after'  => '</h5>',
 						)
 					);
 					?>
