@@ -21,7 +21,7 @@ if ( post_password_required() ) {
 	return;
 }
 
-$comment_count = get_comments_number() + 1;
+$comment_count = get_comments_number();
 ?>
 <div id="comments" class="container mx-auto px-4">
     <div
