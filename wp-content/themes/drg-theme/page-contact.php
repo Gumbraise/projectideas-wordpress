@@ -7,6 +7,14 @@
  * @since 1.0.0
  */
 get_header();
+
+
+$terms = array(
+	'post_type' => 'contacts',
+	'order'     => 'ASC'
+);
+$loop  = new WP_Query( $terms );
+
 ?>
     <section class="bg-gray-200 pb-16">
         <div class="container mx-auto px-4">
@@ -17,15 +25,16 @@ get_header();
                 <div class="h-auto w-full md:flex bg-gray-100 shadow-2xl rounded-lg">
                     <div class="md:w-1/3 w-full space-y-6 p-12 bg-gradient-to-b from-indigo-900 to-purple-900 text-white rounded-t-lg md:rounded-none md:rounded-l-lg">
                         <h3 class="text-xl mb-4">Contact information</h3>
-                        <a href="https://github.com/Gumbraise">
-                            <p class="text-lg"><i class="fab fa-github mr-4"></i>Gumbraise</p>
-                        </a>
-                        <a href="https://twitter.com/DevsAreGenius">
-                            <p class="text-lg"><i class="fab fa-twitter mr-4"></i>@DevsAreGenius</p>
-                        </a>
-                        <a href="mailto:contact@drg.kellis.fr">
-                            <p class="text-lg"><i class="far fa-envelope mr-4"></i>contact@drg.kellis.fr</p>
-                        </a>
+						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                            <a href="<?php the_field( 'link' ); ?>">
+                                <p class="text-lg space-x-4">
+									<?php the_field( 'icon' ); ?>
+                                    <span><?php the_field( 'text' ); ?></span>
+                                </p>
+                            </a>
+						<?php endwhile;
+						wp_reset_postdata();
+						?>
                     </div>
                     <div class="md:w-2/3 w-full p-12">
                         <h3 class="text-xl mb-4">Send us a message</h3>
