@@ -41,7 +41,20 @@ get_header();
 				$loop  = new WP_Query( $terms );
 				while ( $loop->have_posts() ) : $loop->the_post();
 					?>
+                    <div class="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 px-4 text-center">
+                        <div
+                                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+                        >
+                            <div class="bg-gray-200 rounded-t-lg top-0 w-full h-36 bg-center bg-cover relative"
+                                 style='background-image: url("<?php
+                                 if ( has_post_thumbnail() ) {
+	                                 the_post_thumbnail_url();
+                                 } else {
+	                                 echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
+                                 } ?>");'>
+                                <span class="relative block w-full h-full opacity-50 bg-black rounded-t-lg"></span>
                             </div>
+                            <div class="px-4 py-5 flex-auto">
 
                             </div>
                             </div>
