@@ -179,6 +179,8 @@ $comment_count = get_comments_number() + 1;
                                         required
                                     ></textarea>
                     </div>',
+							'class_form'         => 'w-full',
+							'class_container'    => 'w-full',
 						)
 					);
 					?>
