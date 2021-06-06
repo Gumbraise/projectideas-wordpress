@@ -54,3 +54,11 @@ get_header();
                                 class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2"
                         >
 							<?php the_title(); ?>
+                        </h3>
+                        <div class="mb-2 text-gray-700 mt-4">
+                            <i class="fas fa-user mr-2 text-lg text-gray-500"></i
+                            ><a href="profil.html"><?php global $post;
+								$a_id = $post->post_author;
+
+								the_author_meta( 'user_nicename', $a_id ); ?></a>
+                        </div>
