@@ -59,3 +59,5 @@ $comment_count = get_comments_number() + 1;
 						?>
                         <div id="comment-<?php echo $comment->comment_ID; ?>" class="flex">
                             <div class="flex-shrink-0 mr-3">
+                                <a href="<?php echo $comment->comment_author_url; ?>"><img
+                                            class="mt-3 rounded-full w-6 h-6 sm:w-8 sm:h-8"
