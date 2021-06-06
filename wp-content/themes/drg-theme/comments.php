@@ -57,3 +57,5 @@ $comment_count = get_comments_number() + 1;
 				if ( $comments ) {
 					foreach ( $comments as $comment ) {
 						?>
+                        <div id="comment-<?php echo $comment->comment_ID; ?>" class="flex">
+                            <div class="flex-shrink-0 mr-3">
