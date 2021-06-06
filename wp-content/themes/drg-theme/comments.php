@@ -86,3 +86,22 @@ $comment_count = get_comments_number() + 1;
 
 								if ( $replies ) {
 									?>
+                                    <div class="mt-5 space-y-4">
+										<?php foreach ( $replies as $reply ) {
+											?>
+                                            <div id="reply-<?php echo $reply->comment_ID; ?>" class="flex">
+                                                <div class="flex-shrink-0 mr-3">
+                                                    <a href="<?php echo $reply->comment_author_url; ?>"><img
+                                                                class="mt-3 rounded-full w-6 h-6 sm:w-8 sm:h-8"
+                                                                src="<?php echo get_avatar_url( $reply->comment_author_email ); ?>"
+                                                                alt="<?php echo $reply->comment_author . ' profile picture'; ?>"></a>
+                                                </div>
+                                                <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
+                                                    <a href="<?php echo $reply->comment_author_url; ?>"><strong><?php echo $reply->comment_author; ?></strong></a>
+                                                    <span
+                                                            class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $reply->comment_date ), ( time() + 7200 ) ) ?> ago</span>
+                                                    <p class="text-sm">
+		                                                <?php echo $reply->comment_content; ?>
+                                                    </p>
+                                                    <a href="?replytocom=<?php echo $reply->comment_ID; ?>#respond">
+                                                        <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Reply</p>
