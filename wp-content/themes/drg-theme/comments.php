@@ -102,27 +102,29 @@ $comment_count = get_comments_number();
                                                     <span
                                                             class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $reply->comment_date ), ( time() + 7200 ) ) ?> ago</span>
                                                     <p class="text-sm">
-		                                                <?php echo $reply->comment_content; ?>
+														<?php echo $reply->comment_content; ?>
                                                     </p>
                                                     <a href="?replytocom=<?php echo $reply->comment_ID; ?>#respond">
-                                                        <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Reply</p>
+                                                        <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">
+                                                            Reply</p>
                                                     </a>
-	                                                <?php
-	                                                $args = array(
-		                                                'date'   => 'DESC',
-		                                                'status' => 'approve',
-		                                                'parent' => $reply->comment_ID,
-	                                                );
+													<?php
+													$args = array(
+														'date'   => 'DESC',
+														'status' => 'approve',
+														'parent' => $reply->comment_ID,
+													);
 
-	                                                $rereplies_query = new WP_Comment_Query;
-	                                                $rereplies       = $rereplies_query->query( $args );
+													$rereplies_query = new WP_Comment_Query;
+													$rereplies       = $rereplies_query->query( $args );
 
-	                                                if ( $rereplies ) {
-		                                                ?>
+													if ( $rereplies ) {
+														?>
                                                         <div class="mt-5 space-y-4">
-			                                                <?php foreach ( $rereplies as $rereply ) {
-				                                                ?>
-                                                                <div id="reply-<?php echo $rereply->comment_ID; ?>" class="flex">
+															<?php foreach ( $rereplies as $rereply ) {
+																?>
+                                                                <div id="reply-<?php echo $rereply->comment_ID; ?>"
+                                                                     class="flex">
                                                                     <div class="flex-shrink-0 mr-3">
                                                                         <a href="<?php echo $rereply->comment_author_url; ?>"><img
                                                                                     class="mt-3 rounded-full w-6 h-6 sm:w-8 sm:h-8"
@@ -134,17 +136,18 @@ $comment_count = get_comments_number();
                                                                         <span
                                                                                 class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $rereply->comment_date ), ( time() + 7200 ) ) ?> ago</span>
                                                                         <p class="text-sm">
-							                                                <?php echo $rereply->comment_content; ?>
+																			<?php echo $rereply->comment_content; ?>
                                                                         </p>
                                                                         <a href="?replytocom=<?php echo $reply->comment_ID; ?>#respond">
-                                                                            <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Reply</p>
+                                                                            <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">
+                                                                                Reply</p>
                                                                         </a>
                                                                     </div>
                                                                 </div>
-			                                                <?php } ?>
+															<?php } ?>
                                                         </div>
-		                                                <?php
-	                                                } ?>
+														<?php
+													} ?>
                                                 </div>
                                             </div>
 										<?php } ?>
