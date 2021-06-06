@@ -37,7 +37,7 @@ add_action( 'after_setup_theme', 'drg_setup' );
 
 
 function drg_style() {
-	wp_enqueue_style( 'style-reset', get_template_directory_uri() . '/assets/css/reset.min.css', 1 );
+//	wp_enqueue_style( 'style-reset', get_template_directory_uri() . '/assets/css/reset.min.css', 1 );
 	wp_enqueue_style( 'style-tailwindcss', get_template_directory_uri() . '/assets/css/tailwind.min.css', 1 );
 
 	wp_enqueue_style( 'style-default', get_template_directory_uri() . '/style.css' );
