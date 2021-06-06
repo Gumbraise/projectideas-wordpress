@@ -57,8 +57,12 @@ get_header();
                             <div class="px-4 py-5 flex-auto">
                                 <h6 class="text-xl font-semibold"><?php the_title(); ?></h6>
                                 <p class="mt-2 mb-4 text-gray-600">
+	                                <?php echo get_the_excerpt(); ?>
+                                </p>
 
                             </div>
+                            <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
+                                <div class="flex mx-4 items-end">
                             </div>
                         </div>
                     </div>
