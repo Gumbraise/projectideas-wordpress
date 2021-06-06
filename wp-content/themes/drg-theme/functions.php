@@ -69,3 +69,9 @@ add_action( 'get_header', 'remove_admin_login_header' );
 add_theme_support( 'post-thumbnails' );
 
 require get_template_directory() . '/inc/cpt-ideas.php';
+
+function add_author_support_to_posts() {
+	add_post_type_support( 'actualites', 'author' );
+}
+
+add_action( 'init', 'add_author_support_to_posts' );
