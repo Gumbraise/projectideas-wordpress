@@ -45,11 +45,6 @@ function drg_style() {
 
 add_action( 'wp_enqueue_scripts', 'drg_style' );
 
-function remove_wpm_css() {
-	wp_deregister_style( 'admin-bar' );
-}
-
-add_action( 'wp_print_styles', 'remove_wpm_css', 100 );
 
 function drg_scripts() {
 	wp_deregister_script( 'jquery' );
