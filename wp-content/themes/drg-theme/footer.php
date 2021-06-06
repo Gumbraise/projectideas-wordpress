@@ -14,7 +14,7 @@
                 <div class="my-6">
                     <a href="https://twitter.com/DevsAreGenius" target="_blank">
                         <button
-                                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                                 type="button"
                         >
                             <i class="flex fab fa-twitter"></i></button
@@ -22,7 +22,7 @@
                     </a>
                     <a href="https://github.com/Gumbraise" target="_blank">
                         <button
-                                class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                                 type="button"
                         >
                             <i class="flex fab fa-github"></i>
