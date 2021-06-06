@@ -112,23 +112,33 @@
                 </div>
             </div>
             <div class="py-6 px-5 space-y-6">
-                <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a href="post.html"
-                       class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
-                        Post an idea
-                    </a>
-
-                    <a href="find.html"
-                       class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
-                        Find an idea
-                    </a>
-
-                    <a href="contact-us.html"
-                       class="col-span-2 text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
-                        Become certified
-                    </a>
-
-                </div>
+	            <?php
+	            if ( has_nav_menu( 'nav-menu' ) ) {
+		            wp_nav_menu( array(
+			            'menu'                 => 'nav-menu',
+			            'theme_location'       => 'drg',
+			            'container'            => '',
+			            'container_class'      => '',
+			            'container_id'         => '',
+			            'container_aria_label' => '',
+			            'menu_class'           => 'grid grid-cols-2 gap-y-4 gap-x-8',
+			            'menu_id'              => '',
+			            'echo'                 => true,
+			            'fallback_cb'          => 'wp_page_menu',
+			            'before'               => '<div
+                   class="col-span-2 transition duration-100 text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">',
+			            'after'                => '</div>',
+			            'link_before'          => '',
+			            'link_after'           => '',
+			            //'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			            'item_spacing'         => 'preserve',
+			            'depth'                => 0,
+			            'walker'               => '',
+		            ) );
+	            } else {
+		            echo 'Veuillez assigner un menu dans l\'administration WordPress -> Apparence -> Menus -> Gérer les emplacements';
+	            }
+	            ?>
                 <div>
                     <a href="signup.html"
                        class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
