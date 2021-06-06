@@ -43,3 +43,17 @@ $comment_count = get_comments_number() + 1;
 					?>
                 </div>
             </div>
+            <div class="space-y-4 mb-10 py-10 border-b border-gray-300 ">
+				<?php
+				$args = array(
+					'date'   => 'DESC',
+					'status' => 'approve',
+					'parent' => '0'
+				);
+
+				$comments_query = new WP_Comment_Query;
+				$comments       = $comments_query->query( $args );
+
+				if ( $comments ) {
+					foreach ( $comments as $comment ) {
+						?>
