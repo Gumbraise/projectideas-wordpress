@@ -16,6 +16,10 @@ defined( 'ABSPATH' ) || exit;
 // Paramètrage du theme
 if ( ! function_exists( 'drg_setup' ) ) :
 	function drg_setup() {
+		register_nav_menus( array(
+			'nav-menu' => __( 'Nav Menu', 'drg' ),
+		) );
+
 		add_theme_support(
 			'html5',
 			array(
