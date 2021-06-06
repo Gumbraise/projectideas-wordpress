@@ -74,3 +74,15 @@ $comment_count = get_comments_number() + 1;
                                 <a href="?replytocom=<?php echo $comment->comment_ID; ?>#respond">
                                     <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Reply</p>
                                 </a>
+								<?php
+								$args = array(
+									'date'   => 'DESC',
+									'status' => 'approve',
+									'parent' => $comment->comment_ID,
+								);
+
+								$replies_query = new WP_Comment_Query;
+								$replies       = $replies_query->query( $args );
+
+								if ( $replies ) {
+									?>
