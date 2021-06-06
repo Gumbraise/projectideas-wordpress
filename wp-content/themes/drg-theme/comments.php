@@ -159,3 +159,17 @@ $comment_count = get_comments_number() + 1;
 
             <div class="w-full rounded-lg md:px-12">
                 <div class="flex flex-wrap">
+					<?php
+					comment_form(
+						array(
+							'logged_in_as'       => null,
+							'title_reply'        => esc_html__( 'Leave a comment', 'drg' ),
+						)
+					);
+					?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
