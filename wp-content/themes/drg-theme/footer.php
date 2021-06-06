@@ -6,8 +6,8 @@
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4">
-                <span class="sr-only">DRG</span>
-                <img src="assets/img/tech/drg_header_dark_alt.svg" alt="DRG logo" class="w-72">
+                <span class="sr-only">DevsAreGenius</span>
+                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>" alt="DevsAreGenius Logotype Dark" class="w-72 mb-4">
                 <h5 class="text-lg mt-0 mb-2 text-gray-700">
                     Collection of ideas for genius developers.
                 </h5>
