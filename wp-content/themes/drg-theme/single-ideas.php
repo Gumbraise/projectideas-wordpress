@@ -62,3 +62,8 @@ get_header();
 
 								the_author_meta( 'user_nicename', $a_id ); ?></a>
                         </div>
+                        <div class="mb-2 text-gray-700">
+                            <i class="fas fa-clock mr-2 text-lg text-gray-500"></i
+                            ><?php echo human_time_diff( get_the_date( 'U' ), ( time() + 7200 ) ) ?> ago
+                        </div>
+                    </div>
