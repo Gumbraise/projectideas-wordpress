@@ -93,8 +93,8 @@
             <div class="pt-5 pb-6 px-5">
                 <div class="flex items-center justify-between">
                     <div>
-                        <img class="h-8 w-auto" src="assets/img/tech/drg_logo.svg"
                              alt="DRG">
+                        <img class="h-8 w-auto" src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_logo.svg'; ?>"
                     </div>
                     <div class="-mr-2">
                         <button onclick="toggleNavbar('md');"
