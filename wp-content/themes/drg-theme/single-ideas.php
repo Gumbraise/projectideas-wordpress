@@ -79,3 +79,7 @@ get_header();
                 </div>
             </div>
         </div>
+		<?php comments_template(); ?>
+    </section>
+<?php
+get_footer();
