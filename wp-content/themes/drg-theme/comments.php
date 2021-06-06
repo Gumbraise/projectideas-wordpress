@@ -71,3 +71,6 @@ $comment_count = get_comments_number() + 1;
                                 <p class="text-sm">
 									<?php echo $comment->comment_content; ?>
                                 </p>
+                                <a href="?replytocom=<?php echo $comment->comment_ID; ?>#respond">
+                                    <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Reply</p>
+                                </a>
