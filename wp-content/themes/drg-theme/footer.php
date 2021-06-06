@@ -1,4 +1,9 @@
 <?php
+$terms = array(
+	'post_type' => 'contacts',
+	'order'     => 'ASC'
+);
+$loop  = new WP_Query( $terms );
 ?>
 </main>
 
@@ -7,27 +12,24 @@
         <div class="flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4">
                 <span class="sr-only">DevsAreGenius</span>
-                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>" alt="DevsAreGenius Logotype Dark" class="w-72 mb-4">
+                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>"
+                     alt="DevsAreGenius Logotype Dark" class="w-72 mb-4">
                 <h5 class="text-lg mt-0 mb-2 text-gray-700">
                     Collection of ideas for genius developers.
                 </h5>
                 <div class="my-6">
-                    <a href="https://twitter.com/DevsAreGenius" target="_blank">
-                        <button
-                                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                                type="button"
-                        >
-                            <i class="flex fab fa-twitter"></i></button
-                        >
-                    </a>
-                    <a href="https://github.com/Gumbraise" target="_blank">
-                        <button
-                                class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                                type="button"
-                        >
-                            <i class="flex fab fa-github"></i>
-                        </button>
-                    </a>
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <a href="<?php the_field( 'link' ); ?>" target="_blank">
+                            <button
+                                    class="bg-white <?php the_field( 'class' ); ?> shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                                    type="button"
+                            >
+								<?php the_field( 'icon' ); ?></button
+                            >
+                        </a>
+					<?php endwhile;
+					wp_reset_postdata();
+					?>
                 </div>
             </div>
             <div class="w-full lg:w-6/12">
