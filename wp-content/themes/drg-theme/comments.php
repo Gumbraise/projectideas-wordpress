@@ -166,6 +166,9 @@ $comment_count = get_comments_number() + 1;
 							'title_reply'        => esc_html__( 'Leave a comment', 'drg' ),
 							'title_reply_before' => '<h5 class="pb-2 text-gray-800 text-lg">',
 							'title_reply_after'  => '</h5>',
+							'submit_button'      => '<div class="w-full flex items-start">
+                        <div class="text-center w-full"><input class="w-full block text-center transition duration-200 bg-purple-900 text-gray-300 shadow hover:shadow-lg outline-none focus:outline-none uppercase hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded items-center" type="submit" name="post-message" value="SEND COMMENT"></div>
+                    </div>',
 						)
 					);
 					?>
