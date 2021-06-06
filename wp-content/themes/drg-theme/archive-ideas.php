@@ -44,11 +44,11 @@
                    class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                     Post an idea
                 </a>
-                <a href="find.html"
+                <a href="archive-ideas.php"
                    class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                     Find an idea
                 </a>
-                <a href="contact-us.html"
+                <a href="page-contact.php"
                    class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                     Become certified
                 </a>
@@ -96,12 +96,12 @@
                         Post an idea
                     </a>
 
-                    <a href="find.html"
+                    <a href="archive-ideas.php"
                        class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
                         Find an idea
                     </a>
 
-                    <a href="contact-us.html"
+                    <a href="page-contact.php"
                        class="col-span-2 text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium text-center">
                         Become certified
                     </a>
@@ -163,7 +163,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -211,7 +211,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -283,7 +283,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -307,7 +307,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -331,7 +331,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -355,7 +355,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -379,7 +379,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -403,7 +403,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -427,7 +427,7 @@
                         </div>
                         <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                             <div class="flex mx-4 items-end">
-                                <a class="font-bold w-full text-purple-900 text-right" href="article.html">See the idea »</a>
+                                <a class="font-bold w-full text-purple-900 text-right" href="single-ideas.php">See the idea »</a>
                             </div>
                         </div>
                     </div>
@@ -532,7 +532,7 @@
                             <li>
                                 <a
                                         class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="find.html"
+                                        href="archive-ideas.php"
                                 >All ideas</a
                                 >
                             </li>
@@ -579,14 +579,14 @@
                             <li>
                                 <a
                                         class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="contact-us.html"
+                                        href="page-contact.php"
                                 >Report a bug</a
                                 >
                             </li>
                             <li>
                                 <a
                                         class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="contact-us.html"
+                                        href="page-contact.php"
                                 >Contact Us</a
                                 >
                             </li>
