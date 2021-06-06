@@ -4241,7 +4241,7 @@ function paginate_links( $args = '' ) {
 		$link .= $args['add_fragment'];
 
 		$page_links[] = sprintf(
-			'<a class="prev page-numbers" href="%s">%s</a>',
+			'<a class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="%s">%s</a>',
 			/**
 			 * Filters the paginated links for the given archive pages.
 			 *
@@ -4257,7 +4257,8 @@ function paginate_links( $args = '' ) {
 	for ( $n = 1; $n <= $total; $n++ ) :
 		if ( $n == $current ) :
 			$page_links[] = sprintf(
-				'<span aria-current="%s" class="page-numbers current">%s</span>',
+				'<span aria-current="%s"                                class="z-10 bg-purple-50 border-purple-500 text-purple-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+>%s</span>',
 				esc_attr( $args['aria_current'] ),
 				$args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number']
 			);
@@ -4273,7 +4274,8 @@ function paginate_links( $args = '' ) {
 				$link .= $args['add_fragment'];
 
 				$page_links[] = sprintf(
-					'<a class="page-numbers" href="%s">%s</a>',
+					'<a                                class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+ href="%s">%s</a>',
 					/** This filter is documented in wp-includes/general-template.php */
 					esc_url( apply_filters( 'paginate_links', $link ) ),
 					$args['before_page_number'] . number_format_i18n( $n ) . $args['after_page_number']
@@ -4281,7 +4283,7 @@ function paginate_links( $args = '' ) {
 
 				$dots = true;
 			elseif ( $dots && ! $args['show_all'] ) :
-				$page_links[] = '<span class="page-numbers dots">' . __( '&hellip;' ) . '</span>';
+				$page_links[] = '<span class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">' . __( '&hellip;' ) . '</span>';
 
 				$dots = false;
 			endif;
@@ -4297,7 +4299,7 @@ function paginate_links( $args = '' ) {
 		$link .= $args['add_fragment'];
 
 		$page_links[] = sprintf(
-			'<a class="next page-numbers" href="%s">%s</a>',
+			'<a class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="%s">%s</a>',
 			/** This filter is documented in wp-includes/general-template.php */
 			esc_url( apply_filters( 'paginate_links', $link ) ),
 			$args['next_text']
