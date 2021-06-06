@@ -55,6 +55,8 @@ get_header();
                                 <span class="relative block w-full h-full opacity-50 bg-black rounded-t-lg"></span>
                             </div>
                             <div class="px-4 py-5 flex-auto">
+                                <h6 class="text-xl font-semibold"><?php the_title(); ?></h6>
+                                <p class="mt-2 mb-4 text-gray-600">
 
                             </div>
                             </div>
