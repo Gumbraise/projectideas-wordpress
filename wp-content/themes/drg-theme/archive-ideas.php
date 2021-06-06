@@ -63,6 +63,10 @@ get_header();
                             </div>
                             <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                                 <div class="flex mx-4 items-end">
+                                    <a class="font-bold w-full text-purple-900 text-right" href="<?php the_permalink(); ?>">See
+                                        the
+                                        idea »</a>
+                                </div>
                             </div>
                         </div>
                     </div>
