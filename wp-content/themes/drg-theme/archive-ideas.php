@@ -70,6 +70,9 @@ get_header();
                             </div>
                         </div>
                     </div>
+				<?php endwhile;
+				wp_reset_postdata();
+				?>
             </div>
             <div class="px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
 
