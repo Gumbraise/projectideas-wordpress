@@ -66,4 +66,3 @@ function remove_admin_login_header() {
 
 add_action( 'get_header', 'remove_admin_login_header' );
 
-add_action( 'admin_menu', 'remove_menu_items' );
