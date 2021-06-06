@@ -30,8 +30,8 @@
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <a href="/">
                     <span class="sr-only">DRG</span>
-                    <img class="h-8 w-auto sm:h-10 hidden md:flex" src="assets/img/tech/drg_header_alt.svg" alt="DRG">
-                    <img class="h-8 w-auto sm:h-10 flex md:hidden" src="assets/img/tech/drg_logo.svg" alt="DRG">
+                    <img class="h-8 w-auto sm:h-10 hidden md:flex" src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_alt.svg'; ?>" alt="DevsAreGenius Logotype">
+                    <img class="h-8 w-auto sm:h-10 flex md:hidden" src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_logo.svg'; ?>" alt="DevsAreGenius Mark">
                 </a>
             </div>
             <div class="-mr-2 -my-2 md:hidden">
