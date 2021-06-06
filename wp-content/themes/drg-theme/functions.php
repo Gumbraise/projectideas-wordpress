@@ -67,3 +67,5 @@ function remove_admin_login_header() {
 add_action( 'get_header', 'remove_admin_login_header' );
 
 add_theme_support( 'post-thumbnails' );
+
+require get_template_directory() . '/inc/cpt-ideas.php';
