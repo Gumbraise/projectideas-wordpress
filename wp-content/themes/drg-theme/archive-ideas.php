@@ -97,17 +97,24 @@ get_header();
 								echo $page;
 							}
 							echo '</nav>';
+
+						}
+						$from = ( $loop->query_vars['posts_per_page'] * $paged ) - ( $loop->query_vars['posts_per_page'] - 1 );
+						if ( ( $loop->query_vars['posts_per_page'] * $paged ) <= ( $loop->found_posts ) ) {
+							$to = ( $loop->query_vars['posts_per_page'] * $paged );
+						} else {
+							$to = $loop->found_posts;
 						}
 						?>
                     </div>
                     <div class="flex-1 flex items-center justify-center pt-8">
                         <p class="text-sm text-gray-700">
                             Showing
-                            <span class="font-medium">1</span>
+                            <span class="font-medium"><?php echo $from; ?></span>
                             to
-                            <span class="font-medium">12</span>
+                            <span class="font-medium"><?php echo $to; ?></span>
                             of
-                            <span class="font-medium">42</span>
+                            <span class="font-medium"><?php echo wp_count_posts( 'ideas' )->publish; ?></span>
                             results
                         </p>
                     </div>
