@@ -47,23 +47,24 @@ get_header();
                         >
                             <div class="bg-gray-200 rounded-t-lg top-0 w-full h-36 bg-center bg-cover relative"
                                  style='background-image: url("<?php
-                                 if ( has_post_thumbnail() ) {
-	                                 the_post_thumbnail_url();
-                                 } else {
-	                                 echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
-                                 } ?>");'>
+							     if ( has_post_thumbnail() ) {
+								     the_post_thumbnail_url();
+							     } else {
+								     echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
+							     } ?>");'>
                                 <span class="relative block w-full h-full opacity-50 bg-black rounded-t-lg"></span>
                             </div>
                             <div class="px-4 py-5 flex-auto">
                                 <h6 class="text-xl font-semibold"><?php the_title(); ?></h6>
                                 <p class="mt-2 mb-4 text-gray-600">
-	                                <?php echo get_the_excerpt(); ?>
+									<?php echo get_the_excerpt(); ?>
                                 </p>
 
                             </div>
                             <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                                 <div class="flex mx-4 items-end">
-                                    <a class="font-bold w-full text-purple-900 text-right" href="<?php the_permalink(); ?>">See
+                                    <a class="font-bold w-full text-purple-900 text-right"
+                                       href="<?php the_permalink(); ?>">See
                                         the
                                         idea »</a>
                                 </div>
@@ -78,48 +79,26 @@ get_header();
 
                 <div class="inline-block w-full items-center justify-between">
                     <div class="flex-1 flex items-center justify-center">
+
+						<?php
+						$pages = paginate_links( array(
+							'current'   => max( 1, get_query_var( 'paged' ) ),
+							'format'    => 'page/%#%',
+							'total'     => $loop->max_num_pages,
+							'type'      => 'array',
+							'prev_text' => __( '&laquo;', 'drg' ),
+							'next_text' => __( '&raquo;', 'drg' )
+						) );
+						if ( is_array( $pages ) ) {
+							echo '
                         <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
-                             aria-label="Pagination">
-                            <a href="#"
-                               class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                                <span class="sr-only">Previous</span>
-                                <!-- Heroicon name: solid/chevron-left -->
-                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                     fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                          clip-rule="evenodd"/>
-                                </svg>
-                            </a>
-                            <!-- Current: "z-10 bg-purple-50 border-purple-500 text-purple-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
-                            <a href="#" aria-current="page"
-                               class="z-10 bg-purple-50 border-purple-500 text-purple-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-                                1
-                            </a>
-                            <a href="#"
-                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-                                2
-                            </a>
-                            <a href="#"
-                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-                                3
-                            </a>
-                            <a href="#"
-                               class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-                                4
-                            </a>
-                            <a href="#"
-                               class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                                <span class="sr-only">Next</span>
-                                <!-- Heroicon name: solid/chevron-right -->
-                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                     fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                          clip-rule="evenodd"/>
-                                </svg>
-                            </a>
-                        </nav>
+                             aria-label="Pagination">';
+							foreach ( $pages as $page ) {
+								echo $page;
+							}
+							echo '</nav>';
+						}
+						?>
                     </div>
                     <div class="flex-1 flex items-center justify-center pt-8">
                         <p class="text-sm text-gray-700">
