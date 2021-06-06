@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template for displaying a single idea
+ *
+ * @package WordPress
+ * @subpackage DevsAreGenius
+ * @since 1.0.0
+ */
+get_header();
+?>
     <section class="bg-gray-200 pb-16">
         <div class="container mx-auto px-4">
             <div class="py-8">
@@ -87,3 +97,4 @@
         </div>
     </section>
 <?php
+get_footer();
