@@ -119,3 +119,21 @@ $comment_count = get_comments_number() + 1;
 	                                                if ( $rereplies ) {
 		                                                ?>
                                                         <div class="mt-5 space-y-4">
+			                                                <?php foreach ( $rereplies as $rereply ) {
+				                                                ?>
+                                                                <div id="reply-<?php echo $rereply->comment_ID; ?>" class="flex">
+                                                                    <div class="flex-shrink-0 mr-3">
+                                                                        <a href="<?php echo $rereply->comment_author_url; ?>"><img
+                                                                                    class="mt-3 rounded-full w-6 h-6 sm:w-8 sm:h-8"
+                                                                                    src="<?php echo get_avatar_url( $rereply->comment_author_email ); ?>"
+                                                                                    alt="<?php echo $rereply->comment_author . ' profile picture'; ?>"></a>
+                                                                    </div>
+                                                                    <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
+                                                                        <a href="<?php echo $rereply->comment_author_url; ?>"><strong><?php echo $rereply->comment_author; ?></strong></a>
+                                                                        <span
+                                                                                class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $rereply->comment_date ), ( time() + 7200 ) ) ?> ago</span>
+                                                                        <p class="text-sm">
+							                                                <?php echo $rereply->comment_content; ?>
+                                                                        </p>
+                                                                        <a href="?replytocom=<?php echo $reply->comment_ID; ?>#respond">
+                                                                            <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Reply</p>
