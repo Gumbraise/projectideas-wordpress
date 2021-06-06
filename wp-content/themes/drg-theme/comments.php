@@ -169,6 +169,16 @@ $comment_count = get_comments_number() + 1;
 							'submit_button'      => '<div class="w-full flex items-start">
                         <div class="text-center w-full"><input class="w-full block text-center transition duration-200 bg-purple-900 text-gray-300 shadow hover:shadow-lg outline-none focus:outline-none uppercase hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded items-center" type="submit" name="post-message" value="SEND COMMENT"></div>
                     </div>',
+							'comment_field'      => '<div class="w-full md:w-full mb-2 mt-2">
+                                    <textarea
+                                        id="comment" 
+                                        name="comment" 
+                                        class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full"
+                                        placeholder="Type your comment..."
+                                        style="transition: all 0.15s ease 0s;"
+                                        required
+                                    ></textarea>
+                    </div>',
 						)
 					);
 					?>
