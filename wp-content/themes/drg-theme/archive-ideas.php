@@ -27,6 +27,20 @@ get_header();
                     </div>
                 </div>
             </div>
+            <div class="justify-center flex flex-wrap">
+				<?php
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+				$terms = array(
+					'post_type'      => 'ideas',
+					'posts_per_page' => '12',
+					'orderby'        => 'date',
+					'order'          => 'DESC',
+					'paged'          => $paged
+				);
+				$loop  = new WP_Query( $terms );
+				while ( $loop->have_posts() ) : $loop->the_post();
+					?>
                             </div>
 
                             </div>
