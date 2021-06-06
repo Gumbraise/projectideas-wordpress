@@ -67,3 +67,15 @@ get_header();
                             ><?php echo human_time_diff( get_the_date( 'U' ), ( time() + 7200 ) ) ?> ago
                         </div>
                     </div>
+                    <div class="mt-10 py-10 border-t border-gray-300 text-center">
+                        <div class="flex flex-wrap justify-center">
+                            <div class="w-full lg:w-9/12 px-4">
+                                <p class="mb-4 text-lg leading-relaxed text-gray-800">
+									<?php echo get_the_content(); ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
