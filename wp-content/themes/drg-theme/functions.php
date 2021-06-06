@@ -74,3 +74,12 @@ function add_author_support_to_posts() {
 }
 
 add_action( 'init', 'add_author_support_to_posts' );
+
+function custom_posts_per_page( $query ) {
+
+	if ( $query->is_archive( 'project' ) ) {
+		set_query_var( 'posts_per_page', - 1 );
+	}
+}
+
+add_action( 'pre_get_posts', 'custom_posts_per_page' );
