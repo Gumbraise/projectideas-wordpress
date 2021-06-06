@@ -63,3 +63,6 @@ $comment_count = get_comments_number() + 1;
                                             class="mt-3 rounded-full w-6 h-6 sm:w-8 sm:h-8"
                                             src="<?php echo get_avatar_url( $comment->comment_author_email ); ?>"
                                             alt="<?php echo $comment->comment_author . ' profile picture'; ?>"></a>
+                            </div>
+                            <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
+                                <a href="<?php echo $comment->comment_author_url; ?>"><strong><?php echo $comment->comment_author; ?></strong></a>
