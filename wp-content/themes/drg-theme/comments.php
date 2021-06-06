@@ -46,9 +46,10 @@ $comment_count = get_comments_number();
             <div class="space-y-4 mb-10 py-10 border-b border-gray-300 ">
 				<?php
 				$args = array(
-					'date'   => 'DESC',
-					'status' => 'approve',
-					'parent' => '0'
+					'post_id' => $post->ID,
+					'date'    => 'DESC',
+					'status'  => 'approve',
+					'parent'  => '0'
 				);
 
 				$comments_query = new WP_Comment_Query;
