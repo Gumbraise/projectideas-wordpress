@@ -48,20 +48,33 @@
                     </svg>
                 </button>
             </div>
-            <nav class="hidden md:flex space-x-10">
-                <a href="post.html"
-                   class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
-                    Post an idea
-                </a>
-                <a href="find.html"
-                   class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
-                    Find an idea
-                </a>
-                <a href="contact-us.html"
-                   class="text-gray-300 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
-                    Become certified
-                </a>
-            </nav>
+	        <?php
+	        if ( has_nav_menu( 'nav-menu' ) ) {
+		        wp_nav_menu( array(
+			        'menu'                 => 'nav-menu',
+			        'theme_location'       => 'drg',
+			        'container'            => '',
+			        'container_class'      => '',
+			        'container_id'         => '',
+			        'container_aria_label' => '',
+			        'menu_class'           => 'hidden md:flex space-x-10',
+			        'menu_id'              => '',
+			        'echo'                 => true,
+			        'fallback_cb'          => '',
+			        'before'               => '<div
+                   class="text-gray-300 transition duration-100 hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">',
+			        'after'                => '</div>',
+			        'link_before'          => '',
+			        'link_after'           => '',
+			        //'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			        'item_spacing'         => 'preserve',
+			        'depth'                => 0,
+			        'walker'               => '',
+		        ) );
+	        } else {
+		        echo 'Veuillez assigner un menu dans l\'administration WordPress -> Apparence -> Menus -> Gérer les emplacements';
+	        }
+	        ?>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a href="signin.html"
                    class="hover:bg-purple-700 text-white px-3 py-2 rounded-md text-base font-medium">
