@@ -155,3 +155,7 @@ $comment_count = get_comments_number() + 1;
 					<?php }
 				} ?>
             </div>
+            <!-- comment form -->
+
+            <div class="w-full rounded-lg md:px-12">
+                <div class="flex flex-wrap">
