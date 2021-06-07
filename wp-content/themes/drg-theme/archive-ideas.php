@@ -22,6 +22,7 @@ get_header();
                             </button>
 
                             <input
+                                    id="search-bar"
                                     name="search"
                                     type="text"
                                     placeholder="Keywords (college, Vue.js, Java, ...)"
@@ -132,6 +133,12 @@ get_header();
                     </div>
                 </div>
             </div>
+			<?php } else { ?>
+                <label for="search-bar" class="relative text-center py-24 md:py-48 space-y-4">
+                    <p class="text-3xl font-semibold">No Idea Found</p>
+                    <p class="text-xl">Try to change your keywords</p>
+                </label>
+			<?php } ?>
         </div>
     </section>
 <?php
