@@ -19,12 +19,15 @@ $loop  = new WP_Query( $terms );
     <section class="bg-gray-200 pb-16">
         <div class="container mx-auto px-4">
             <div class="py-8">
-                <h2 class="text-2xl font-semibold leading-tight">Contact us</h2>
+                <h2 class="text-2xl font-semibold leading-tight"><?php the_title(); ?></h2>
             </div>
             <div class="flex flex-wrap">
                 <div class="h-auto w-full md:flex bg-gray-100 shadow-2xl rounded-lg">
                     <div class="md:w-1/3 w-full space-y-6 p-12 bg-gradient-to-b from-indigo-900 to-purple-900 text-white rounded-t-lg md:rounded-none md:rounded-l-lg">
                         <h3 class="text-xl mb-4">Contact information</h3>
+                        <p class="text-lg space-x-4">
+                            <?php the_content(); ?>
+                        </p>
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                             <a href="<?php the_field( 'link' ); ?>">
                                 <p class="text-lg space-x-4">
