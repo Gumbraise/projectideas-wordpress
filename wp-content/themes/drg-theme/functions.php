@@ -18,6 +18,7 @@ if ( ! function_exists( 'drg_setup' ) ) :
 	function drg_setup() {
 		register_nav_menus( array(
 			'nav-menu' => __( 'Nav Menu', 'drg' ),
+			'footer-menu' => __( 'Footer Menu', 'drg' ),
 		) );
 
 		add_theme_support(
@@ -84,3 +85,8 @@ function custom_posts_per_page( $query ) {
 }
 
 add_action( 'pre_get_posts', 'custom_posts_per_page' );
+
+function register_navwalker(){
+	require_once get_template_directory() . '/walker/Footer_Nav_Menu.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );

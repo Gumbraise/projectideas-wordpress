@@ -33,6 +33,32 @@ $loop  = new WP_Query( $terms );
                 </div>
             </div>
             <div class="w-full lg:w-6/12">
+				<?php
+				if ( has_nav_menu( 'footer-menu' ) ) {
+					wp_nav_menu( array(
+						'menu'                 => 'footer-menu',
+						'theme_location'       => 'drg',
+						'container'            => '',
+						'container_class'      => '',
+						'container_id'         => '',
+						'container_aria_label' => '',
+						'menu_class'           => 'flex flex-wrap items-top mb-6',
+						'menu_id'              => '',
+						'echo'                 => true,
+						'fallback_cb'          => 'wp_page_menu',
+						'before'               => '',
+						'after'                => '',
+						'link_before'          => '',
+						'link_after'           => '',
+						'items_wrap'           => '<ul id="%1$s" class="%2$s"><div class="w-full lg:w-4/12 px-4 ml-auto">%3$s</div></ul>',
+						'item_spacing'         => 'preserve',
+						'depth'                => 0,
+						'walker'               => new Footer_Nav_Menu(),
+					) );
+				} else {
+					echo 'Veuillez assigner un menu dans l\'administration WordPress -> Apparence -> Menus -> Gérer les emplacements';
+				}
+				?>
                 <div class="flex flex-wrap items-top mb-6">
                     <div class="w-full lg:w-4/12 px-4 ml-auto">
                         <h6 class="block uppercase text-gray-600 text-sm font-semibold my-2">Useful Links</h6>
@@ -67,7 +93,7 @@ $loop  = new WP_Query( $terms );
                             </li>
                         </ul>
                     </div>
-                    <div class="w-full lg:w-4/12 px-4">
+                    <div class="w-full lg:w-4/12 px-4 ml-auto">
                         <h6 class="block uppercase text-gray-600 text-sm font-bold my-2">Other Resources</h6>
                         <ul class="list-unstyled">
                             <li>
