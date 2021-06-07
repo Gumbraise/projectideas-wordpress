@@ -52,6 +52,7 @@ get_header();
 				}
 
 				$loop = new WP_Query( $terms );
+				if ( $loop->have_posts() ) {
 				while ( $loop->have_posts() ) : $loop->the_post();
 					?>
                     <div class="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 px-4 text-center">
@@ -85,8 +86,7 @@ get_header();
                         </div>
                     </div>
 				<?php endwhile;
-				wp_reset_postdata();
-				?>
+				wp_reset_postdata(); ?>
             </div>
             <div class="px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
 
