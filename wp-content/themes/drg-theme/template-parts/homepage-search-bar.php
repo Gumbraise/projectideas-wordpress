@@ -10,7 +10,6 @@
                   id="blackOverlay"
                   class="w-full h-full absolute opacity-50 bg-black"
           ></span>
-						class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
     </div>
     <div class="container relative mx-auto">
         <div class="items-center flex flex-wrap">
@@ -30,6 +29,7 @@
                                 name="search"
                                 type="text"
                                 placeholder="Keywords (college, Vue.js, Java, ...)"
+                                class="custom-transition px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
 							<?php if ( isset( $_GET['search'] ) ) {
 								echo 'value ="' . $_GET['search'] . '"';
 							} ?>
