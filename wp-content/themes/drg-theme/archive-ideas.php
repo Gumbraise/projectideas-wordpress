@@ -36,8 +36,11 @@ get_header();
 					'posts_per_page' => '12',
 					'orderby'        => 'date',
 					'order'          => 'DESC',
-					'paged'          => $paged
+					'paged'          => $paged,
 				);
+
+				if (isset($_GET['search'])) $terms += ['s' => $_GET['search'],];
+
 				$loop  = new WP_Query( $terms );
 				while ( $loop->have_posts() ) : $loop->the_post();
 					?>
