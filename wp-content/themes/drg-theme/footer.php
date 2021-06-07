@@ -33,99 +33,40 @@ $loop  = new WP_Query( $terms );
                 </div>
             </div>
             <div class="w-full lg:w-6/12">
-				<?php
-				if ( has_nav_menu( 'footer-menu' ) ) {
-					wp_nav_menu( array(
-						'menu'                 => 'footer-menu',
-						'theme_location'       => 'drg',
-						'container'            => '',
-						'container_class'      => '',
-						'container_id'         => '',
-						'container_aria_label' => '',
-						'menu_class'           => 'flex flex-wrap items-top mb-6',
-						'menu_id'              => '',
-						'echo'                 => true,
-						'fallback_cb'          => 'wp_page_menu',
-						'before'               => '',
-						'after'                => '',
-						'link_before'          => '',
-						'link_after'           => '',
-						'items_wrap'           => '<ul id="%1$s" class="%2$s"><div class="w-full lg:w-4/12 px-4 ml-auto">%3$s</div></ul>',
-						'item_spacing'         => 'preserve',
-						'depth'                => 0,
-						'walker'               => new Footer_Nav_Menu(),
-					) );
-				} else {
-					echo 'Veuillez assigner un menu dans l\'administration WordPress -> Apparence -> Menus -> Gérer les emplacements';
-				}
-				?>
                 <div class="flex flex-wrap items-top mb-6">
-                    <div class="w-full lg:w-4/12 px-4 ml-auto">
-                        <h6 class="block uppercase text-gray-600 text-sm font-semibold my-2">Useful Links</h6>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="find.html"
-                                >All ideas</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="#"
-                                >Day idea</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="#"
-                                >Advanced search</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="#"
-                                >Search by user</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="w-full lg:w-4/12 px-4 ml-auto">
-                        <h6 class="block uppercase text-gray-600 text-sm font-bold my-2">Other Resources</h6>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="#"
-                                >Privacy policy</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="#"
-                                >Terms &amp; Conditions</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="contact-us.html"
-                                >Report a bug</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                        class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                                        href="contact-us.html"
-                                >Contact Us</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+					<?php
+					if ( has_nav_menu( 'footer-menu' ) ) {
+						$menus = wp_get_nav_menu_items( 'footer-menu' );
+						foreach ($menus as $menu) {
+							if ( $menu->menu_item_parent === '0' ) {
+								?>
+                                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                                    <h6 class="block uppercase text-gray-600 text-sm font-semibold my-2"><?php echo $menu->title; ?></h6>
+                                    <ul class="list-unstyled">
+										<?php
+										foreach ( $menus as $submenu ) {
+											if ( $submenu->menu_item_parent == $menu->ID ) {
+
+												?>
+                                                <li>
+                                                    <a
+                                                            class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                                            href="<?php echo $submenu->url; ?>"
+                                                    ><?php echo $submenu->title; ?></a
+                                                    >
+                                                </li>
+												<?php
+											}
+										} ?>
+                                    </ul>
+                                </div>
+								<?php
+							}
+						}
+					} else {
+						echo 'Veuillez assigner un menu dans l\'administration WordPress -> Apparence -> Menus -> Gérer les emplacements';
+					}
+					?>
                 </div>
             </div>
         </div>
