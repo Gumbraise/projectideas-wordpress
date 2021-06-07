@@ -16,14 +16,21 @@ get_header();
                 </div>
                 <div class="lex sm:flex-row flex-col">
                     <div class="mt-4 relative flex w-full flex-wrap items-stretch mb-3">
-                        <button class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
-                            <i class="fas fa-search text-purple-500"></i>
-                        </button>
-                        <input
-                                type="text"
-                                placeholder="Keywords (college, Vue.js, Java, ...)"
-                                class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
-                        />
+                        <form class="w-full" action="/ideas" method="GET">
+                            <button class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                                <i class="fas fa-search text-purple-500"></i>
+                            </button>
+
+                            <input
+                                    name="search"
+                                    type="text"
+                                    placeholder="Keywords (college, Vue.js, Java, ...)"
+                                    class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
+								<?php if ( isset( $_GET['search'] ) ) {
+									echo 'value ="' . $_GET['search'] . '"';
+								} ?>
+                            />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -39,9 +46,11 @@ get_header();
 					'paged'          => $paged,
 				);
 
-				if (isset($_GET['search'])) $terms += ['s' => $_GET['search'],];
+				if ( isset( $_GET['search'] ) ) {
+					$terms += [ 's' => $_GET['search'], ];
+				}
 
-				$loop  = new WP_Query( $terms );
+				$loop = new WP_Query( $terms );
 				while ( $loop->have_posts() ) : $loop->the_post();
 					?>
                     <div class="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 px-4 text-center">
