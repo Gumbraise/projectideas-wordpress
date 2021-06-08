@@ -202,10 +202,8 @@ $loop = new WP_Query( $terms );
 						<?php endwhile;
 						wp_reset_postdata(); ?>
 					<?php } else { ?>
-                        <label for="search-bar" class="relative text-center py-24 md:py-48 space-y-4">
-                            <p class="text-3xl font-semibold">No Idea Found</p>
-                            <p class="text-xl">Try to change your keywords</p>
-                        </label>
+                        <p class="text-3xl font-semibold"><?php echo $profile->display_name; ?> hasn't posted idea for
+                            the moment</p>
 					<?php } ?>
                 </div>
             </div>
