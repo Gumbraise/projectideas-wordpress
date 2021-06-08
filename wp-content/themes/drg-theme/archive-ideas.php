@@ -90,6 +90,10 @@ get_header();
                                         <p class="inline-block"><i
                                                     class="fas fa-eye"></i> <?= gt_get_post_view(); ?></p>
                                     </div>
+                                    <div class="space-x-4 float-right">
+                                        <p class="inline-block <?php if ( get_field( 'privacy' ) == 'private' ) {
+											echo 'text-yellow-500"><i class="fas fa-lock';
+										} else echo 'text-purple-500"><i class="fas fa-unlock' ?>"></i></p>
                                     </div>
                                 </div>
                             </div>
