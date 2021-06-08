@@ -68,7 +68,7 @@ $comment_count = get_comments_number();
                             <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
                                 <a href="<?php echo $comment->comment_author_url; ?>"><strong><?php echo $comment->comment_author; ?></strong></a>
                                 <span
-                                        class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $comment->comment_date ), ( time() + 7200 ) ) ?> ago</span>
+                                        class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $comment->comment_date ), time() ) ?> ago</span>
                                 <p class="text-sm">
 									<?php echo $comment->comment_content; ?>
                                 </p>
@@ -100,7 +100,7 @@ $comment_count = get_comments_number();
                                                 <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
                                                     <a href="<?php echo $reply->comment_author_url; ?>"><strong><?php echo $reply->comment_author; ?></strong></a>
                                                     <span
-                                                            class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $reply->comment_date ), ( time() + 7200 ) ) ?> ago</span>
+                                                            class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $reply->comment_date ), time() ) ?> ago</span>
                                                     <p class="text-sm">
 														<?php echo $reply->comment_content; ?>
                                                     </p>
@@ -134,7 +134,7 @@ $comment_count = get_comments_number();
                                                                     <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
                                                                         <a href="<?php echo $rereply->comment_author_url; ?>"><strong><?php echo $rereply->comment_author; ?></strong></a>
                                                                         <span
-                                                                                class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $rereply->comment_date ), ( time() + 7200 ) ) ?> ago</span>
+                                                                                class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $rereply->comment_date ), time() ) ?> ago</span>
                                                                         <p class="text-sm">
 																			<?php echo $rereply->comment_content; ?>
                                                                         </p>

@@ -67,7 +67,7 @@ gt_set_post_view();
                         </div>
                         <div class="mb-2 text-gray-700">
                             <i class="fas fa-clock mr-2 text-lg text-gray-500"></i
-                            ><?php echo human_time_diff( get_the_date( 'U' ), ( time() + 7200 ) ) ?> ago
+                            ><?php echo human_time_diff( get_the_date( 'U' ), time() ) ?> ago
                         </div>
                     </div>
                     <div class="mt-10 py-10 border-t border-gray-300 text-center">
