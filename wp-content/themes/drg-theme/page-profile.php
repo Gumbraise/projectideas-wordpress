@@ -119,6 +119,7 @@ $comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total
             <div class="mt-8">
                 <div class="w-full inline-block">
                     <h4 class="text-2xl font-semibold inline-block text-left leading-tight">His last ideas:</h4>
+                    <a href="/ideas?user=<?php echo $profile->display_name; ?>">
                         <p class="text-lg text-purple-900 font-semibold inline-blockv float-right leading-tight">See
                             more
                             »</p>
