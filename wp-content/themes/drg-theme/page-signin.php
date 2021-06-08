@@ -57,7 +57,7 @@ get_header();
 
                                 <label
                                         class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                                        for="grid-password"
+                                        for="user_password-50"
                                 >Password</label
                                 >
                                 <div class="relative flex w-full flex-wrap items-stretch w-full mb-3">
