@@ -17,6 +17,18 @@ $where         = 'WHERE comment_approved = 1 AND user_id = ' . $profile->ID;
 $comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total 
                                  FROM {$wpdb->comments}
                                  {$where}" );
+
+
+$terms = array(
+	'post_type'      => 'ideas',
+	'posts_per_page' => '4',
+	'orderby'        => 'date',
+	'order'          => 'DESC',
+	'author'         => $profile->ID,
+
+);
+
+$loop = new WP_Query( $terms );
 ?>
     <section class="relative block" style="height: 500px;">
         <div
@@ -85,7 +97,7 @@ $comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total
                                 <div class="mr-4 p-3 text-center">
                       <span
                               class="text-xl font-bold block uppercase tracking-wide text-gray-700"
-                      >10</span
+                      ><?php echo $loop->found_posts; ?></span
                       ><span class="text-sm text-gray-500">Ideas</span>
                                 </div>
                                 <div class="lg:mr-4 p-3 text-center">
@@ -128,15 +140,6 @@ $comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total
                 <div class="flex flex-wrap my-4">
 					<?php
 
-					$terms = array(
-						'post_type'      => 'ideas',
-						'posts_per_page' => '4',
-						'orderby'        => 'date',
-						'order'          => 'DESC',
-						'author'         => $profile->ID,
-					);
-
-					$loop = new WP_Query( $terms );
 					if ( $loop->have_posts() ) {
 						while ( $loop->have_posts() ) : $loop->the_post();
 							?>
