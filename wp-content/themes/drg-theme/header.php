@@ -38,10 +38,18 @@
                          alt="DevsAreGenius Mark">
                 </a>
             </div>
-            <div class="-mr-2 -my-2 md:hidden">
+            <div class="-mr-2 -my-2 md:hidden relative">
+	            <?php if ( is_user_logged_in() ): ?>
+                    <a href="/profile"
+                       class="hover:bg-purple-700 transition duration-100 relative text-white rounded-full text-base font-medium mr-2 mt-1 inline-block float-left">
+                        <div class="bg-cover bg-center m-1 w-10 h-10 rounded-full"
+                             style='background-image: url("<?php echo get_avatar_url( wp_get_current_user()->ID ) ?>");'>
+                        </div>
+                    </a>
+	            <?php endif; ?>
                 <button onclick="toggleNavbar('md');"
                         type="button"
-                        class="bg-purple-900 rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-900"
+                        class="inline-block bg-purple-900 rounded-md m-2 p-2 inline-flex items-center justify-center text-gray-300 hover:text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-900"
                         aria-expanded="false">
                     <span class="sr-only">Open menu</span>
                     <!-- Heroicon name: outline/menu -->
@@ -158,16 +166,23 @@
 				}
 				?>
                 <div>
-                    <a href="/signup"
-                       class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
-                        Sign up
-                    </a>
-                    <p class="mt-6 text-center text-base font-medium text-gray-300">
-                        You already have an account ?
-                        <a href="/signin" class="text-purple-400 hover:text-purple-300">
-                            Sign in
+					<?php if ( is_user_logged_in() ): ?>
+                        <a href="/logout"
+                           class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
+                            Log out of <?php echo wp_get_current_user()->user_login; ?>
                         </a>
-                    </p>
+					<?php else: ?>
+                        <a href="/signup"
+                           class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
+                            Sign up
+                        </a>
+                        <p class="mt-6 text-center text-base font-medium text-gray-300">
+                            You already have an account ?
+                            <a href="/signin" class="text-purple-400 hover:text-purple-300">
+                                Sign in
+                            </a>
+                        </p>
+					<?php endif; ?>
                 </div>
             </div>
         </div>
