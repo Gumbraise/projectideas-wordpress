@@ -76,11 +76,11 @@
 	        }
 	        ?>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a href="signin.html"
+                <a href="/signin"
                    class="hover:bg-purple-700 transition duration-100 text-white px-3 py-2 rounded-md text-base font-medium">
                     Sign in
                 </a>
-                <a href="signup.html"
+                <a href="/signup"
                    class="ml-8 whitespace-nowrap transition duration-100 inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
                     Sign up
                 </a>
@@ -140,13 +140,13 @@
 	            }
 	            ?>
                 <div>
-                    <a href="signup.html"
+                    <a href="/signup"
                        class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
                         Sign up
                     </a>
                     <p class="mt-6 text-center text-base font-medium text-gray-300">
                         You already have an account ?
-                        <a href="signin.html" class="text-purple-400 hover:text-purple-300">
+                        <a href="/signin" class="text-purple-400 hover:text-purple-300">
                             Sign in
                         </a>
                     </p>
