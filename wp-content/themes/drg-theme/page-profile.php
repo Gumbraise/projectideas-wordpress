@@ -7,6 +7,16 @@
  * @since 1.0.0
  */
 get_header();
+
+
+global $wpdb, $post;
+
+$profile = get_user_by( 'id', um_profile_id() );
+
+$where         = 'WHERE comment_approved = 1 AND user_id = ' . $profile->ID;
+$comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total 
+                                 FROM {$wpdb->comments}
+                                 {$where}" );
 ?>
     <section class="relative block" style="height: 500px;">
         <div
