@@ -70,7 +70,7 @@ $comment_count = get_comments_number();
                                 <span
                                         class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $comment->comment_date ), time() ) ?> ago</span>
                                 <p class="text-sm">
-									<?php echo $comment->comment_content; ?>
+									<?php echo htmlspecialchars($comment->comment_content); ?>
                                 </p>
                                 <a href="?replytocom=<?php echo $comment->comment_ID; ?>#respond">
                                     <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Reply</p>
@@ -102,7 +102,7 @@ $comment_count = get_comments_number();
                                                     <span
                                                             class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $reply->comment_date ), time() ) ?> ago</span>
                                                     <p class="text-sm">
-														<?php echo $reply->comment_content; ?>
+														<?php echo htmlspecialchars($reply->comment_content); ?>
                                                     </p>
                                                     <a href="?replytocom=<?php echo $reply->comment_ID; ?>#respond">
                                                         <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">
@@ -136,7 +136,7 @@ $comment_count = get_comments_number();
                                                                         <span
                                                                                 class="text-xs text-gray-400"><?php echo human_time_diff( strtotime( $rereply->comment_date ), time() ) ?> ago</span>
                                                                         <p class="text-sm">
-																			<?php echo $rereply->comment_content; ?>
+																			<?php echo htmlspecialchars($rereply->comment_content); ?>
                                                                         </p>
                                                                         <a href="?replytocom=<?php echo $reply->comment_ID; ?>#respond">
                                                                             <p class="mt-5 uppercase tracking-wide text-gray-400 font-bold text-xs">
