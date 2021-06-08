@@ -76,11 +76,19 @@ get_header();
                                 </a>
                                 <span class="relative block w-full h-full opacity-50 bg-black rounded-t-lg"></span>
                             </div>
-                            <div class="px-4 py-5 flex-auto">
-                                <h6 class="text-xl font-semibold"><?php the_title(); ?></h6>
-                                <p class="mt-2 mb-4 text-gray-600">
-									<?php echo get_the_excerpt(); ?>
-                                </p>
+                            <div class="px-4 py-5 flex-auto relative">
+                                <div class="pb-4">
+                                    <h6 class="text-xl font-semibold"><?php the_title(); ?></h6>
+                                    <p class="mt-2 mb-4 text-gray-600">
+										<?php echo get_the_excerpt(); ?>
+                                    </p>
+                                </div>
+                                <div class="absolute bottom-0 left-0 mb-3 px-4 text-gray-400 w-full">
+                                    <div class="space-x-4 float-left">
+                                        <p class="inline-block"><i
+                                                    class="fas fa-comment"></i> <?php echo get_comments_number(); ?></p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                                 <div class="flex mx-4 items-end">
