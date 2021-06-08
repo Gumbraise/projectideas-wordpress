@@ -51,6 +51,10 @@ get_header();
 					$terms += [ 's' => $_GET['search'], ];
 				}
 
+				if ( isset( $_GET['user'] ) ) {
+					$terms += [ 'author_name' => $_GET['user'], ];
+				}
+
 				$loop = new WP_Query( $terms );
 				if ( $loop->have_posts() ) {
 				while ( $loop->have_posts() ) : $loop->the_post();
