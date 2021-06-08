@@ -7,6 +7,9 @@
  * @since 1.0.0
  */
 get_header();
+
+gt_set_post_view();
+
 ?>
     <section class="relative block" style="height: 500px;">
         <div
