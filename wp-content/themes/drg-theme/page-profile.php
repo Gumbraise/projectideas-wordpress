@@ -126,6 +126,20 @@ $comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total
                     </a>
                 </div>
                 <div class="flex flex-wrap my-4">
+					<?php
+
+					$terms = array(
+						'post_type'      => 'ideas',
+						'posts_per_page' => '4',
+						'orderby'        => 'date',
+						'order'          => 'DESC',
+						'author'         => $profile->ID,
+					);
+
+					$loop = new WP_Query( $terms );
+					if ( $loop->have_posts() ) {
+						while ( $loop->have_posts() ) : $loop->the_post();
+							?>
                             <div class="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 px-4 text-center">
                                 <div
                                         class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
