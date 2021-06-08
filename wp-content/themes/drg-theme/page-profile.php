@@ -139,7 +139,6 @@ $loop = new WP_Query( $terms );
                 </div>
                 <div class="flex flex-wrap my-4">
 					<?php
-
 					if ( $loop->have_posts() ) {
 						while ( $loop->have_posts() ) : $loop->the_post();
 							?>
@@ -154,14 +153,6 @@ $loop = new WP_Query( $terms );
 									     } else {
 										     echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
 									     } ?>");'>
-                                        <a href="<?php echo get_author_posts_url( get_post_field( 'post_author' ) ); ?>">
-                                            <div class="z-10 bg-white w-8 h-8 sm:w-auto rounded-full absolute m-4 shadow-lg">
-                                                <div class="bg-cover bg-center w-6 h-6 rounded-full m-1 inline-block"
-                                                     style='background-image: url("<?php echo get_avatar_url( get_post_field( 'post_author' ) ); ?>");'>
-                                                </div>
-                                                <p class="hidden md:block float-right py-1 pl-2 pr-4 text-gray-800"><?php echo get_the_author_meta( 'display_name', get_post_field( 'post_author' ) ); ?></p>
-                                            </div>
-                                        </a>
                                         <span class="relative block w-full h-full opacity-50 bg-black rounded-t-lg"></span>
                                     </div>
                                     <div class="px-4 py-5 flex-auto relative">
