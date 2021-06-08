@@ -87,6 +87,9 @@ get_header();
                                     <div class="space-x-4 float-left">
                                         <p class="inline-block"><i
                                                     class="fas fa-comment"></i> <?php echo get_comments_number(); ?></p>
+                                        <p class="inline-block"><i
+                                                    class="fas fa-eye"></i> <?= gt_get_post_view(); ?></p>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
