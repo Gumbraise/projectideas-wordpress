@@ -101,6 +101,7 @@ $comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total
                         <h3
                                 class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2"
                         >
+							<?php echo $profile->display_name; ?>
                         </h3>
                     </div>
                     <div class="mt-10 py-10 border-t border-gray-300 text-center">
