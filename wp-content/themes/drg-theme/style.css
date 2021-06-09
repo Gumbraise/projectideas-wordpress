@@ -82,6 +82,7 @@ html, body {
 .custom-transition, .custom-button {
     transition: all 0.15s ease 0s;
 }
+
 .custom-transition:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -99,4 +100,26 @@ html, body {
 
 .child-w-full p, .wpcf7 {
     width: 100%;
+}
+
+.evan {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+.evan:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 0;
+    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+    background-color: rgba(91, 33, 182, 0.5)
+}
+
+.evan:hover:after {
+    top: 0;
 }
