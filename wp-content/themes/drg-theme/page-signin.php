@@ -25,7 +25,7 @@ get_header();
                     >
                         <div class="rounded-t mb-0 px-6 py-6">
                             <div class="text-center mb-3">
-                                <img src="assets/img/tech/drg_header_dark_alt.svg" alt="DRG Header"
+                                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>" alt="DRG Header"
                                      class="w-64 block m-auto">
                             </div>
                             <hr class="mt-6 border-b-1 border-gray-400"/>
