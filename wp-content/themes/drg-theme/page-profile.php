@@ -193,7 +193,7 @@ $loop = new WP_Query( $terms );
 						<?php endwhile;
 						wp_reset_postdata(); ?>
 					<?php } else { ?>
-                        <p class="text-3xl font-semibold"><?php echo $profile->display_name; ?> hasn't posted idea for
+                        <p class="text-xl w-full text-center"><?php echo $profile->display_name; ?> hasn't posted idea for
                             the moment</p>
 					<?php } ?>
                 </div>
