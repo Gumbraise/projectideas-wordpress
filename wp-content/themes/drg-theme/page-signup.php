@@ -25,13 +25,14 @@ get_header();
                     >
                         <div class="rounded-t mb-0 px-6 py-6">
                             <div class="text-center mb-3">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>" alt="DRG Header"
+                                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>"
+                                     alt="DRG Header"
                                      class="w-64 block m-auto">
                             </div>
                             <hr class="mt-6 border-b-1 border-gray-400"/>
                         </div>
                         <div class="flex-auto px-4 lg:px-10 py-10 pt-0 py-12">
-                            <form>
+                            <form action="" method="post">
 
                                 <label
                                         class="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -43,6 +44,10 @@ get_header();
                                         <i class="fas fa-user text-purple-500"></i>
                                     </div>
                                     <input
+                                            name="user_login-49"
+                                            id="user_login-49"
+                                            data-validate="unique_username"
+                                            data-key="user_login"
                                             type="text"
                                             class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
                                             placeholder="Username"
@@ -61,6 +66,11 @@ get_header();
                                         <i class="fas fa-envelope text-purple-500"></i>
                                     </div>
                                     <input
+                                            name="user_email-49"
+                                            id="user_email-49"
+                                            data-validate="unique_email"
+                                            data-key="user_email"
+                                            data-temp-mail-org="0"
                                             type="email"
                                             class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
                                             placeholder="Email"
@@ -79,6 +89,10 @@ get_header();
                                         <i class="fas fa-lock text-purple-500"></i>
                                     </div>
                                     <input
+                                            name="user_password-49"
+                                            id="user_password-49"
+                                            data-validate=""
+                                            data-key="user_password"
                                             type="password"
                                             class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
                                             placeholder="Password"
@@ -96,6 +110,10 @@ get_header();
                                         <i class="fas fa-lock text-purple-500"></i>
                                     </div>
                                     <input
+                                            name="confirm_user_password-49"
+                                            id="confirm_user_password-49"
+                                            data-validate=""
+                                            data-key="confirm_user_password"
                                             type="password"
                                             class="px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full pl-10"
                                             placeholder="Repeat the password"
@@ -103,20 +121,25 @@ get_header();
                                             required
                                     />
                                 </div>
+                                <input type="hidden" name="um_request" id="um_request_49" class="input" value=""
+                                       size="25" autocomplete="off">
+                                <input type="hidden" id="_wpnonce" name="_wpnonce" value="1b196da5f6"><input
+                                        type="hidden" name="_wp_http_referer" value="/signup/">
                                 <div class="text-center mt-6">
-                                    <button class="w-full block text-center transition duration-200 bg-purple-900 text-gray-300 shadow hover:shadow-lg outline-none focus:outline-none uppercase hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded items-center">
-                                        Sign up
-                                    </button>
+                                    <input type="submit"
+                                           value="Sign up"
+                                           class="w-full block text-center transition duration-200 bg-purple-900 text-gray-300 shadow hover:shadow-lg outline-none focus:outline-none uppercase hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded items-center"
+                                           id="um-submit-btn">
                                 </div>
                             </form>
                             <div class="flex flex-wrap mt-6">
                                 <div class="w-1/2">
-                                    <a href="<?php echo get_home_url();?>/forgot-password" class="text-gray-700"
+                                    <a href="<?php echo get_home_url(); ?>/forgot-password" class="text-gray-700"
                                     ><small>Forgot password?</small></a
                                     >
                                 </div>
                                 <div class="w-1/2 text-right">
-                                    <a href="<?php echo get_home_url();?>/signin" class="text-gray-700"
+                                    <a href="<?php echo get_home_url(); ?>/signin" class="text-gray-700"
                                     ><small>Sign in to your account</small></a
                                     >
                                 </div>
