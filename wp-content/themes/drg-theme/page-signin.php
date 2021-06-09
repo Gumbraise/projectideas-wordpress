@@ -105,12 +105,12 @@ get_header();
                             </form>
                             <div class="flex flex-wrap mt-6">
                                 <div class="w-1/2">
-                                    <a href="#" class="text-gray-700"
+                                    <a href="<?php echo get_home_url();?>/forgot-password" class="text-gray-700"
                                     ><small>Forgot password?</small></a
                                     >
                                 </div>
                                 <div class="w-1/2 text-right">
-                                    <a href="signup.html" class="text-gray-700"
+                                    <a href="<?php echo get_home_url();?>/signup" class="text-gray-700"
                                     ><small>Create new account</small></a
                                     >
                                 </div>
