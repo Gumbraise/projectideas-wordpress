@@ -103,6 +103,7 @@ get_header();
                                             style="transition: all 0.15s ease 0s;"
                                             required
                                     />
+                                    <p class="text-red-700 text-xs pt-2">* Choose a password with at least a lower char, an upper char and a number.</p>
                                 </div>
                                 <label
                                         class="block uppercase text-gray-700 text-xs font-bold mb-2"
