@@ -33,7 +33,7 @@ $loop = new WP_Query( $terms );
     <section class="relative block" style="height: 500px;">
         <div
                 class="absolute top-0 w-full h-full bg-center bg-cover"
-                style='background-image: url("assets/img/scenery/image5.jpg");'
+                style='background-image: url("<?php echo get_avatar_url( $profile->ID, array( 'size' => 2000 ) ) ?>");'
         >
           <span
                   id="blackOverlay"
