@@ -134,7 +134,7 @@ get_header();
                                 <div class="text-center mt-6">
                                     <input type="submit"
                                            value="Sign up"
-                                           class="w-full block text-center transition duration-200 bg-purple-900 text-gray-300 shadow hover:shadow-lg outline-none focus:outline-none uppercase hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded items-center"
+                                           class="cursor-pointer w-full block text-center transition duration-200 bg-purple-900 text-gray-300 shadow hover:shadow-lg outline-none focus:outline-none uppercase hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded items-center"
                                            id="um-submit-btn">
                                 </div>
                             </form>
