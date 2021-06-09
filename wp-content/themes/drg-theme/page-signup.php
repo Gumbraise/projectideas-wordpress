@@ -6,6 +6,10 @@
  * @subpackage DevsAreGenius
  * @since 1.0.0
  */
+
+if ( is_user_logged_in() ): header( 'Location: ' . get_home_url() . '/profile' );
+endif;
+
 get_header();
 ?>
     <section class="relative w-full h-screen flex content-center items-center justify-center" style="min-height: 75vh;">
