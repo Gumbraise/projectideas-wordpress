@@ -18,7 +18,6 @@ $comment_count = $wpdb->get_var( "SELECT COUNT( * ) AS total
                                  FROM {$wpdb->comments}
                                  {$where}" );
 
-
 $terms = array(
 	'post_type'      => 'ideas',
 	'posts_per_page' => '4',
@@ -29,6 +28,10 @@ $terms = array(
 );
 
 $loop = new WP_Query( $terms );
+
+$hours_since = floor( ( time() - strtotime( $profile->user_registered ) ) / 3600 );
+$iq_profile  = $hours_since + ( $comment_count * 5 ) + ( $loop->found_posts * 20 )
+
 ?>
     <section class="relative block" style="height: 500px;">
         <div
@@ -91,7 +94,8 @@ $loop = new WP_Query( $terms );
                                 <div class="mr-4 p-3 text-center">
                       <span
                               class="text-xl font-bold block uppercase tracking-wide text-gray-700"
-                      >2405</span
+                      ><?php echo $iq_profile; ?>
+                      </span
                       ><span class="text-sm text-gray-500">IQ</span>
                                 </div>
                                 <div class="mr-4 p-3 text-center">
@@ -193,7 +197,8 @@ $loop = new WP_Query( $terms );
 						<?php endwhile;
 						wp_reset_postdata(); ?>
 					<?php } else { ?>
-                        <p class="text-xl w-full text-center"><?php echo $profile->display_name; ?> hasn't posted idea for
+                        <p class="text-xl w-full text-center"><?php echo $profile->display_name; ?> hasn't posted idea
+                            for
                             the moment</p>
 					<?php } ?>
                 </div>
