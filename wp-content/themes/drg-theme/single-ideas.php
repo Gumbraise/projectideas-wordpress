@@ -74,7 +74,7 @@ gt_set_post_view();
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-9/12 px-4">
                                 <p class="mb-4 text-lg leading-relaxed text-gray-800">
-									<?php echo get_the_content(); ?>
+									<?php echo htmlspecialchars( get_the_content() ); ?>
                                 </p>
                             </div>
                         </div>
