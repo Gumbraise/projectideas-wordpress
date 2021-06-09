@@ -30,7 +30,7 @@ $terms = array(
 $loop = new WP_Query( $terms );
 
 $hours_since = floor( ( time() - strtotime( $profile->user_registered ) ) / 3600 );
-$iq_profile  = $hours_since + ( $comment_count * 5 ) + ( $loop->found_posts * 20 )
+$iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop->found_posts * 20 ) ) * 5 )
 
 ?>
     <section class="relative block" style="height: 500px;">
