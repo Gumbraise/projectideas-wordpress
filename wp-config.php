@@ -1,90 +1,98 @@
 <?php
 /**
- * The base configuration for WordPress
+ * La configuration de base de votre installation WordPress.
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * Ce fichier est utilisé par le script de création de wp-config.php pendant
+ * le processus d’installation. Vous n’avez pas à utiliser le site web, vous
+ * pouvez simplement renommer ce fichier en « wp-config.php » et remplir les
+ * valeurs.
  *
- * This file contains the following configurations:
+ * Ce fichier contient les réglages de configuration suivants :
  *
- * * MySQL settings
- * * Secret keys
- * * Database table prefix
- * * ABSPATH
+ * Réglages MySQL
+ * Préfixe de table
+ * Clés secrètes
+ * Langue utilisée
+ * ABSPATH
  *
- * @link https://wordpress.org/support/article/editing-wp-config-php/
+ * @link https://fr.wordpress.org/support/article/editing-wp-config-php/.
  *
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'drg' );
+// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
+/** Nom de la base de données de WordPress. */
+define( 'DB_NAME', 'haram' );
 
-/** MySQL database username */
+/** Utilisateur de la base de données MySQL. */
 define( 'DB_USER', 'root' );
 
-/** MySQL database password */
+/** Mot de passe de la base de données MySQL. */
 define( 'DB_PASSWORD', '' );
 
-/** MySQL hostname */
+/** Adresse de l’hébergement MySQL. */
 define( 'DB_HOST', 'localhost' );
 
-/** Database Charset to use in creating database tables. */
+/** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
 
-/** The Database Collate type. Don't change this if in doubt. */
+/**
+ * Type de collation de la base de données.
+ * N’y touchez que si vous savez ce que vous faites.
+ */
 define( 'DB_COLLATE', '' );
 
 /**#@+
- * Authentication Unique Keys and Salts.
+ * Clés uniques d’authentification et salage.
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ * Remplacez les valeurs par défaut par des phrases uniques !
+ * Vous pouvez générer des phrases aléatoires en utilisant
+ * {@link https://api.wordpress.org/secret-key/1.1/salt/ le service de clés secrètes de WordPress.org}.
+ * Vous pouvez modifier ces phrases à n’importe quel moment, afin d’invalider tous les cookies existants.
+ * Cela forcera également tous les utilisateurs à se reconnecter.
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'dZdC_X<JVc@z<d3d;~gj3O`>8jm>/C`FF;jbMp!s%P^7^l;Zn`?6{.D4b{602:TE' );
-define( 'SECURE_AUTH_KEY',  '3HA/O}+ 9!{3W|>Isp89BE|bJK)WySjdz[:R3V0:u{6Rrp=Q1_Uh{W1/5sqX?kV6' );
-define( 'LOGGED_IN_KEY',    '+@VhE[O=cDp<,stw}8]pId&LUJ;3.+Xq-ToW<4WEb_l-=B&]JY>N]aT%%,.2JhH0' );
-define( 'NONCE_KEY',        'hl3WJe*D`eM~5<M;Od6h5cbVHLgD8=7?2Ev,9,5|c3gy!D0/l#!/x}}`UM7Chkh*' );
-define( 'AUTH_SALT',        'Y&<2(5G5$.q51S`?e1>L<{R@ouE?2n^zKn>PW9G+h}{aoCGA6G#e~U`8?!4+~w,$' );
-define( 'SECURE_AUTH_SALT', '6~6?S}jpW8I:c+(&y:S0C[/]P$lf)k4Dl./ Ic@)*z^[Q=H/TBLI,Q3Q7B:[C~mN' );
-define( 'LOGGED_IN_SALT',   '/A9j+cARxIFG.Z]Fgv`Y9&[$K$xO/e9:f$9;(C@q89UKW]BKMaCjYM?67N$=|#2c' );
-define( 'NONCE_SALT',       '<OwvK2Dp$-iV*p)A5C+k|caNb/UAk{`]S7f14$/1#pAI4xxy}l4YjB;7f|:@nR^[' );
-
+define( 'AUTH_KEY',         'Cf]@#hdYgdO9og=nG478UGIVBFahB3Q4oQaSQzJ;r.6bl{Oxg4t1W QC;YFfl-A1' );
+define( 'SECURE_AUTH_KEY',  'F4bZdF9!2BBSO3O5Pm3|M,LT(oK<5WBdg;N>PtAT{hI]8A2J|{a2=}VFiVgo&]k+' );
+define( 'LOGGED_IN_KEY',    '{uL?@V Mhw}+BUx:|F<@mSNAEk_Z?Yk(YDLumPpk=_Xd`GM=Li$xfpU=B&peG|l2' );
+define( 'NONCE_KEY',        'a-o!M/1Ml+X r|mvR &791Z9yS8HR2%bp:M|LhoVJ+5/gE+X~UKRteZFbhJ@e1?V' );
+define( 'AUTH_SALT',        'yMSWwihF?wb)jrm]W@g^O$2F;]a=zqNM(0l<?mu3#KP;no2LqW1WPke,-,Bv^2Um' );
+define( 'SECURE_AUTH_SALT', '(w]DA@WL{*2xFR,`=sUE,5oI(>O&d-4SU2rz_CR*/zbOq5{9@0hGf1:F4>,15ot-' );
+define( 'LOGGED_IN_SALT',   'y,=tg+AEJN@4bR|:<}t)dw%{B(w,2U^@Z-)aPj@RarX*wb98u57FRAR+$I(yh7d{' );
+define( 'NONCE_SALT',       '/i(Yi<W!^pLw2rfs;jaFcQ2_8]e^c/N_aOE%0&DlQ-Tx7nXqS/T*7`.!q:Rztutw' );
 /**#@-*/
 
 /**
- * WordPress Database Table prefix.
+ * Préfixe de base de données pour les tables de WordPress.
  *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
+ * Vous pouvez installer plusieurs WordPress sur une seule base de données
+ * si vous leur donnez chacune un préfixe unique.
+ * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
-$table_prefix = '50drg_';
+$table_prefix = 'toi';
 
 /**
- * For developers: WordPress debugging mode.
+ * Pour les développeurs : le mode déboguage de WordPress.
  *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
+ * En passant la valeur suivante à "true", vous activez l’affichage des
+ * notifications d’erreurs pendant vos essais.
+ * Il est fortement recommandé que les développeurs d’extensions et
+ * de thèmes se servent de WP_DEBUG dans leur environnement de
+ * développement.
  *
- * For information on other constants that can be used for debugging,
- * visit the documentation.
+ * Pour plus d’information sur les autres constantes qui peuvent être utilisées
+ * pour le déboguage, rendez-vous sur le Codex.
  *
- * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
 
-/* That's all, stop editing! Happy publishing. */
+/* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 
-/** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
-}
+/** Chemin absolu vers le dossier de WordPress. */
+if ( ! defined( 'ABSPATH' ) )
+  define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 
-/** Sets up WordPress vars and included files. */
-require_once ABSPATH . 'wp-settings.php';
+/** Réglage des variables de WordPress et de ses fichiers inclus. */
+require_once( ABSPATH . 'wp-settings.php' );

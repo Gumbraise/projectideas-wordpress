@@ -20,12 +20,11 @@ if ( isset( $_POST['post'] ) ) {
 
 	$post_ID = wp_insert_post( $post_data );
 
-	update_field('field_60bf39ef56e0f', htmlspecialchars( $_POST['confidentiality'] ), $post_ID);
+	update_field( 'field_60bf39ef56e0f', htmlspecialchars( $_POST['confidentiality'] ), $post_ID );
+	update_field( 'field_60c137a24c2a0', htmlspecialchars( $att['attach_id'] ), $post_ID );
 
-	set_post_thumbnail( $post_ID, $_POST['image'] );
 
-	var_dump($_POST['image']);
-	var_dump($_POST);
+	var_dump( $_POST );
 
 //	header( 'Location: ' . get_permalink( $post_ID ) );
 }
