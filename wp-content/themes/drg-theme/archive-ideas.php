@@ -96,7 +96,8 @@ get_header();
                                     </div>
                                     <div class="space-x-4 float-right">
                                         <p class="inline-block"><i
-                                                    class="fas fa-clock"></i> <?php echo human_time_diff( strtotime( get_the_date() ), time() ) ?> ago</p>
+                                                    class="fas fa-clock"></i> <?php echo human_time_diff( strtotime( get_the_date() ), time() ) ?>
+                                            ago</p>
                                         <p class="inline-block <?php if ( get_field( 'privacy' ) == 'private' ) {
 											echo 'text-yellow-500"><i class="fas fa-lock';
 										} else echo 'text-purple-500"><i class="fas fa-unlock' ?>"></i></p>
@@ -164,7 +165,8 @@ get_header();
 			<?php } else { ?>
                 <label for="search-bar" class="relative text-center py-24 md:py-48 space-y-4">
                     <p class="text-3xl font-semibold">No Idea Found</p>
-                    <p class="text-xl">Maybe you are tying to find if your idea is here. Go quickly post it via <a class="evan" href="<?php echo get_home_url();?>/post">this page</a>!</p>
+                    <p class="text-xl">Maybe you are tying to find if your idea is here. Go quickly post it via <a
+                                class="evan" href="<?php echo get_home_url(); ?>/post">this page</a>!</p>
                 </label>
 			<?php } ?>
         </div>
