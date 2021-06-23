@@ -11,6 +11,8 @@ if ( is_user_logged_in() ): header( 'Location: ' . get_home_url() . '/profile' )
 endif;
 
 get_header();
+
+echo do_shortcode('[ultimatemember form_id="49"]');
 ?>
     <section class="relative w-full h-screen flex content-center items-center justify-center" style="min-height: 75vh;">
         <div
