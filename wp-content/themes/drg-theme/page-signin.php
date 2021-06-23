@@ -11,8 +11,6 @@ if ( is_user_logged_in() ): header( 'Location: ' . get_home_url() . '/profile' )
 endif;
 
 get_header();
-
-echo do_shortcode('[ultimatemember form_id="50"]');
 ?>
     <section class="relative w-full h-screen flex content-center items-center justify-center" style="min-height: 75vh;">
         <div
@@ -31,12 +29,97 @@ echo do_shortcode('[ultimatemember form_id="50"]');
                     >
                         <div class="rounded-t mb-0 px-6 py-6">
                             <div class="text-center mb-3">
-                                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>" alt="DRG Header"
+                                <img src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_dark_alt.svg'; ?>"
+                                     alt="DRG Header"
                                      class="w-64 block m-auto">
                             </div>
                             <hr class="mt-6 border-b-1 border-gray-400"/>
                         </div>
                         <div class="flex-auto px-4 lg:px-10 py-10 pt-0 py-12">
+                            <form method="post" action="" autocomplete="off">
+
+                                <div class="um-row _um_row_1 " style="margin: 0 0 30px 0;">
+                                    <div class="um-col-1">
+                                        <div id="um_field_50_username"
+                                             class="um-field um-field-text  um-field-username um-field-text um-field-type_text"
+                                             data-key="username">
+                                            <div class="um-field-label"><label for="username-50">Username or
+                                                    E-mail</label>
+                                                <div class="um-clear"></div>
+                                            </div>
+                                            <div class="um-field-area">
+                                                <input autocomplete="off"
+                                                       class="um-form-field valid " type="text"
+                                                       name="username-50" id="username-50"
+                                                       value="" placeholder=""
+                                                       data-validate="unique_username_or_email"
+                                                       data-key="username">
+
+                                            </div>
+                                        </div>
+                                        <div id="um_field_50_user_password"
+                                             class="um-field um-field-password  um-field-user_password um-field-password um-field-type_password"
+                                             data-key="user_password">
+                                            <div class="um-field-label"><label for="user_password-50">Password</label>
+                                                <div class="um-clear"></div>
+                                            </div>
+                                            <div class="um-field-area">
+                                                <input class="um-form-field valid "
+                                                       type="password" name="user_password-50"
+                                                       id="user_password-50" value=""
+                                                       placeholder="" data-validate=""
+                                                       data-key="user_password">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="form_id" id="form_id_50" value="50">
+
+                                <p class="um_request_name">
+                                    <label for="um_request_50">Only fill in if you are not human</label>
+                                    <input type="hidden" name="um_request" id="um_request_50" class="input" value=""
+                                           size="25" autocomplete="off">
+                                </p>
+
+                                <input type="hidden" id="_wpnonce" name="_wpnonce" value="a5934620d4">
+                                <input
+                                        type="hidden" name="_wp_http_referer" value="/signin/">
+                                <div class="um-col-alt">
+                                    <div class="um-field um-field-c">
+                                        <div class="um-field-area">
+                                            <label class="um-field-checkbox ">
+                                                <input type="checkbox" name="rememberme" value="1">
+                                                <span class="um-field-checkbox-state"><i
+                                                            class="um-icon-android-checkbox-outline-blank"></i></span>
+                                                <span class="um-field-checkbox-option"> Remember me</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="um-clear"></div>
+
+                                    <div class="um-left um-half">
+                                        <input type="submit" value="Login" class="um-button" id="um-submit-btn">
+                                    </div>
+                                    <div class="um-right um-half">
+                                        <a href="http://devsaregenius.com/signup/" class="um-button um-alt">
+                                            Register </a>
+                                    </div>
+
+
+                                    <div class="um-clear"></div>
+
+                                </div>
+
+
+                                <div class="um-col-alt-b">
+                                    <a href="http://devsaregenius.com/forgot-password/" class="um-link-alt">
+                                        Forgot your password? </a>
+                                </div>
+
+
+                            </form>
                             <form action="" method="post">
 
                                 <label
@@ -98,7 +181,8 @@ echo do_shortcode('[ultimatemember form_id="50"]');
                                     >
                                 </div>
                                 <input type="hidden" name="form_id" id="form_id_50" value="50">
-                                <input type="hidden" name="um_request" id="um_request_50" class="input" value="" size="25" autocomplete="off">
+                                <input type="hidden" name="um_request" id="um_request_50" class="input" value=""
+                                       size="25" autocomplete="off">
                                 <input type="hidden" id="_wpnonce" name="_wpnonce" value="99d54a0aab">
                                 <input type="hidden" name="_wp_http_referer" value="/signin/">
                                 <div class="text-center mt-6">
@@ -111,12 +195,12 @@ echo do_shortcode('[ultimatemember form_id="50"]');
                             </form>
                             <div class="flex flex-wrap mt-6">
                                 <div class="w-1/2">
-                                    <a href="<?php echo get_home_url();?>/forgot-password" class="text-gray-700"
+                                    <a href="<?php echo get_home_url(); ?>/forgot-password" class="text-gray-700"
                                     ><small>Forgot password?</small></a
                                     >
                                 </div>
                                 <div class="w-1/2 text-right">
-                                    <a href="<?php echo get_home_url();?>/signup" class="text-gray-700"
+                                    <a href="<?php echo get_home_url(); ?>/signup" class="text-gray-700"
                                     ><small>Create new account</small></a
                                     >
                                 </div>
