@@ -26,56 +26,22 @@
 
 		$loop = new WP_Query( $terms );
 		if ( $loop->have_posts() ) {
-			while ( $loop->have_posts() ) :
-				$loop->the_post();
-
-				?>
-                <div class="lg:ml-20 grid grid-flow-col grid-rows-3 grid-cols-2">
+			?>
+            <div class="lg:ml-20 grid grid-flow-col grid-rows-<?php echo ceil( count( $loop->posts ) / 2 ) ?> grid-cols-2">
+				<?php
+				while ( $loop->have_posts() ) :
+					$loop->the_post();
+					$image = get_field( 'sponsor_logo' );
+					?>
                     <div class="h-48 flex items-center justify-center border-r border-b border-gray-500 border-opacity-25 border-solid">
-                        <a href="https://www.instagram.com/kepi_working_legally/">
-                            <img class="w-24"
-                                 src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/kepi_logo.svg'; ?>"
-                                 alt="Kepi Logotype">
+                        <a href="<?php the_field( 'sponsor_link' ); ?>">
+                            <img class="<?php the_field( 'size' ); ?>"
+                                 src="<?php echo $image['url']; ?>"
+                                 alt="<?php echo $image['alt']; ?>">
                         </a>
                     </div>
-                    <div class="h-48 flex items-center justify-center border-r border-b border-t border-gray-500 border-opacity-25 border-solid">
-                        <a href="https://krbk.dev/">
-                            <img class="w-24 rounded-xl"
-                                 src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/koro_logo.svg'; ?>"
-                                 alt="Koro Mark">
-                        </a>
-                    </div>
-                    <div class="h-48 flex items-center justify-center border-r border-t border-gray-500 border-opacity-25 border-solid">
-                        <a href="https://dsc.bio/sparkot">
-                            <img class="h-32"
-                                 src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/sparkot_logo.png'; ?>"
-                                 alt="Sparkot Logotype">
-                        </a>
-                    </div>
-                    <div class="h-48 flex items-center justify-center border-l border-b border-gray-500 border-opacity-25 border-solid">
-                        <a href="https://palamazon.fr/">
-                            <img class="w-36"
-                                 src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/palamazon_header.svg'; ?>"
-                                 alt="Palamazon Logotype">
-                        </a>
-                    </div>
-                    <div class="h-48 flex items-center justify-center border-l border-b border-t border-gray-500 border-opacity-25 border-solid">
-                        <a href="https://kellis.fr/">
-                            <img class="w-36"
-                                 src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/gumbraise_header.svg'; ?>"
-                                 alt="Gumbraise Logotype">
-                        </a>
-                    </div>
-                    <div class="h-48 flex items-center justify-center border-l border-t border-gray-500 border-opacity-25 border-solid">
-                        <a href="https://quark-lang.dev/">
-                            <img class="w-36"
-                                 src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/quark_header.svg'; ?>"
-                                 alt="Quark Logotype">
-                        </a>
-                    </div>
-                </div>
-			<?php
-			endwhile;
-		} ?>
+				<?php endwhile; ?>
+            </div>
+		<?php } ?>
     </div>
 </div>
