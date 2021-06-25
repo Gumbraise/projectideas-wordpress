@@ -27,11 +27,10 @@
                 >
                     <div class="bg-gray-200 rounded-t-lg top-0 w-full h-36 bg-center bg-cover relative"
                          style='background-image: url("<?php
-		                 if ( has_post_thumbnail() ) {
-			                 the_post_thumbnail_url();
-		                 } else {
-			                 echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
-		                 } ?>");'>
+					     if ( has_post_thumbnail() ) {
+						     the_post_thumbnail_url();
+						     echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
+					     } ?>");'>
                         <a href="<?php echo get_author_posts_url( get_post_field( 'post_author' ) ); ?>">
                             <div class="z-10 bg-white w-8 h-8 sm:w-auto rounded-full absolute m-4 shadow-lg">
                                 <div class="bg-cover bg-center w-6 h-6 rounded-full m-1 inline-block"
@@ -46,7 +45,7 @@
                         <div class="pb-4">
                             <h6 class="text-xl font-semibold"><?php the_title(); ?></h6>
                             <p class="mt-2 mb-4 text-gray-600">
-					            <?php echo get_the_excerpt(); ?>
+								<?php echo get_the_excerpt(); ?>
                             </p>
                         </div>
                         <div class="absolute bottom-0 left-0 mb-3 px-4 text-gray-400 w-full">
