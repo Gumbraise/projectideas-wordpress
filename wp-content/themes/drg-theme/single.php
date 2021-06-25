@@ -7,6 +7,8 @@
  * @since 1.0.0
  */
 get_header();
+
+global $wp;
 ?>
 
 	<section class="bg-gray-200 py-16">
