@@ -29,6 +29,7 @@
                          style='background-image: url("<?php
 					     if ( has_post_thumbnail() ) {
 						     the_post_thumbnail_url();
+					     } else {
 						     echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
 					     } ?>");'>
                         <a href="<?php echo get_author_posts_url( get_post_field( 'post_author' ) ); ?>">

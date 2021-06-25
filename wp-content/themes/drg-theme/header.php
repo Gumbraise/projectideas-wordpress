@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title><?php bloginfo( 'name' ); ?></title>
+    <title><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></title>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link rel="icon" href="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>">
 	<?php wp_head(); ?>

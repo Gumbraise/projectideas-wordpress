@@ -15,10 +15,10 @@
         <div class="items-center flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <h1 class="text-white font-semibold text-3xl sm:text-5xl">
-                    DevsAreGenius
+					<?php bloginfo( 'name' ); ?>
                 </h1>
                 <p class="mt-4 text-lg text-gray-300">
-                    Collection of ideas for genius developers, start using the app by searching some keywords below
+					<?php bloginfo( 'description' ); ?>, start using the app by searching some keywords below
                 </p>
                 <div class="mt-4 relative flex w-full flex-wrap items-stretch mb-3">
                     <form class="w-full" action="/ideas" method="GET">
