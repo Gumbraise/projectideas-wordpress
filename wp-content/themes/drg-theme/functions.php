@@ -71,6 +71,7 @@ add_theme_support( 'post-thumbnails' );
 
 require get_template_directory() . '/inc/cpt-ideas.php';
 require get_template_directory() . '/inc/cpt-contact.php';
+require get_template_directory() . '/inc/cpt-sponsors.php';
 
 function add_author_support_to_posts() {
 	add_post_type_support( 'actualites', 'author' );
