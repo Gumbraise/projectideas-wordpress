@@ -22,7 +22,7 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define( 'DB_NAME', 'haram' );
+define( 'DB_NAME', 'drg' );
 
 /** Utilisateur de la base de données MySQL. */
 define( 'DB_USER', 'root' );
@@ -70,7 +70,7 @@ define( 'NONCE_SALT',       '/i(Yi<W!^pLw2rfs;jaFcQ2_8]e^c/N_aOE%0&DlQ-Tx7nXqS/T
  * si vous leur donnez chacune un préfixe unique.
  * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
-$table_prefix = 'toi';
+$table_prefix = '50drg';
 
 /**
  * Pour les développeurs : le mode déboguage de WordPress.
