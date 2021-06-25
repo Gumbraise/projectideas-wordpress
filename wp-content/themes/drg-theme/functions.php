@@ -199,4 +199,4 @@ function my_update_attachment( $f, $pid, $t = '', $c = '' ) {
 	}
 }
 
-add_theme_support( 'custom-background' );
+add_theme_support( 'custom-header' );
