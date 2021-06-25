@@ -21,7 +21,7 @@
 					<?php bloginfo( 'description' ); ?>, start using the app by searching some keywords below
                 </p>
                 <div class="mt-4 relative flex w-full flex-wrap items-stretch mb-3">
-                    <form class="w-full" action="/ideas" method="GET">
+                    <form class="w-full" action="<?php echo home_url( '/ideas' ); ?>" method="GET">
                         <button class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
                             <i class="fas fa-search text-purple-500"></i>
                         </button>
