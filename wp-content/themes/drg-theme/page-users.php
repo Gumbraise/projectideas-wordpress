@@ -59,12 +59,12 @@ get_header();
                                  FROM {$wpdb->comments}
                                  {$where}" );
 
-					$terms = array(
+					$terms2 = array(
 						'post_type' => 'ideas',
 						'author'    => $user->ID,
 					);
 
-					$loop2 = new WP_Query( $terms );
+					$loop2 = new WP_Query( $terms2 );
 
 					$hours_since = floor( ( time() - strtotime( $user->user_registered ) ) / 3600 );
 					$iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop2->found_posts * 20 ) ) * 5 )
