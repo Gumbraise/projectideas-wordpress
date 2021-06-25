@@ -30,16 +30,16 @@
 					<img class="w-24 rounded-xl" src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/koro_logo.svg'; ?>" alt="Koro Mark">
 				</a>
 			</div>
-			<div class="h-48 flex items-center justify-center border-r border-t border-gray-500 border-opacity-25 border-solid">
-				<a href="https://dsc.bio/sparkot">
-					<img class="h-32" src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/sparkot_logo.png'; ?>" alt="Sparkot Logotype">
-				</a>
-			</div>
-			<div class="h-48 flex items-center justify-center border-l border-b border-gray-500 border-opacity-25 border-solid">
-				<a href="https://palamazon.fr/">
-					<img class="w-36" src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/palamazon_header.svg'; ?>" alt="Palamazon Logotype">
-				</a>
-			</div>
+            <div class="h-48 flex items-center justify-center border-r border-t border-gray-500 border-opacity-25 border-solid">
+                <a href="https://dsc.bio/sparkot">
+                    <img class="h-32" src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/sparkot_logo.png'; ?>" alt="Sparkot Logotype">
+                </a>
+            </div>
+            <div class="h-48 flex items-center justify-center border-l border-b border-gray-500 border-opacity-25 border-solid">
+                <a href="https://palamazon.fr/">
+                    <img class="w-36" src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/palamazon_header.svg'; ?>" alt="Palamazon Logotype">
+                </a>
+            </div>
 			<div class="h-48 flex items-center justify-center border-l border-b border-t border-gray-500 border-opacity-25 border-solid">
 				<a href="https://kellis.fr/">
 					<img class="w-36" src="<?php echo get_template_directory_uri() . '/assets/img/sponsors/gumbraise_header.svg'; ?>" alt="Gumbraise Logotype">
