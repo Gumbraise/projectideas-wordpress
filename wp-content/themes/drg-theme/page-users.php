@@ -47,7 +47,7 @@ get_header();
 				);
 
 				if ( isset( $_GET['search'] ) ) {
-					$terms += [ 's' => $_GET['search'], ];
+					$terms += [ 'search' => '*'.$_GET['search'].'*', ];
 				}
 
 				$loop              = get_users( $terms );
