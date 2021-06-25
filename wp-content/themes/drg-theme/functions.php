@@ -55,6 +55,7 @@ function drg_scripts() {
 	wp_deregister_script( 'jquery' );
 
 	wp_enqueue_script( 'script-default', get_template_directory_uri() . '/assets/js/theme.js' );
+	wp_enqueue_script( 'script-cookies', '//cdn.cookie-script.com/s/408981c05c8f6d8e8e7f47affa2ebdc3.js' );
 }
 
 
