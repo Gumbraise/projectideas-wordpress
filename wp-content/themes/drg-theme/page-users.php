@@ -52,6 +52,8 @@ get_header();
 
 				$loop              = get_users( $terms );
 
+				if ( $loop ) {
+
 				foreach ( $loop as $user ):
 
 					$where = 'WHERE comment_approved = 1 AND user_id = ' . $user->ID;
@@ -65,6 +67,7 @@ get_header();
 					);
 
 					$loop2 = new WP_Query( $terms2 );
+
 
 					$hours_since = floor( ( time() - strtotime( $user->user_registered ) ) / 3600 );
 					$iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop2->found_posts * 20 ) ) * 5 )
@@ -141,6 +144,11 @@ get_header();
                     </div>
                 </div>
             </div>
+			<?php } else { ?>
+                <label for="search-bar" class="relative text-center py-24 md:py-48 space-y-4">
+                    <p class="text-3xl font-semibold">No User Found</p>
+                </label>
+			<?php } ?>
         </div>
     </section>
 <?php
