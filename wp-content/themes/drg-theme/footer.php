@@ -11,11 +11,11 @@ $loop  = new WP_Query( $terms );
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4">
-                <span class="sr-only">DevsAreGenius</span>
+                <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
                 <img src="<?php echo get_header_image(); ?>"
                      alt="DevsAreGenius Footer Logo" class="w-72 mb-4">
                 <h5 class="text-lg mt-0 mb-2 text-gray-700">
-                    Collection of ideas for genius developers.
+	                <?php bloginfo( 'description' ); ?>
                 </h5>
                 <div class="my-6">
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
