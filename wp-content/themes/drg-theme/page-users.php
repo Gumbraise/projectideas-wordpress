@@ -47,7 +47,7 @@ get_header();
 				);
 
 				if ( isset( $_GET['search'] ) ) {
-					$terms += [ 'search' => '*'.$_GET['search'].'*', ];
+					$terms += [ 'search' => '*' . $_GET['search'] . '*', ];
 				}
 
 				$loop              = get_users( $terms );
@@ -105,9 +105,8 @@ get_header();
                             <div class="bg-gray-200 px-6 py-4 rounded-b-lg">
                                 <div class="flex mx-4 items-end">
                                     <a class="font-bold w-full text-purple-900 text-right"
-                                       href="<?php echo home_url( '/profile/' . $user->user_nicename ); ?>">See
-                                        the
-                                        profile »</a>
+                                       href="<?php echo home_url( '/ideas?user=' . $user->user_nicename ); ?>">See
+                                        his ideas »</a>
                                 </div>
                             </div>
                         </div>
