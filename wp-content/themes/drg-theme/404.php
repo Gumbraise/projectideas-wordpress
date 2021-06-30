@@ -14,10 +14,10 @@ get_header();
                 <h1 class="text-4xl font-semibold">404</h1>
                 <p class="text-xl">Page not found. If you advise us to add this page, contact us on <a
                             class="evan"
-                            href="<?php echo get_home_url(); ?>/post">this
+                            href="<?php echo home_url( '/post' ); ?>">this
                         page</a>!</p>
 
-                <form class="relative" action="/ideas" method="GET">
+                <form class="relative" action="<?php echo home_url( '/ideas' ); ?>" method="GET">
                     <button class="z-10 h-full leading-snug font-normal absolute text-center text-purple-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
                         <i class="fas fa-search text-purple-500"></i>
                     </button>
