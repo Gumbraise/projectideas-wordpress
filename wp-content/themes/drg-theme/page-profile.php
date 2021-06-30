@@ -124,8 +124,11 @@ $iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop->found_posts 
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-9/12 px-4">
                                 <p class="mb-4 text-lg leading-relaxed text-gray-800">
-                                    Hello, I'm Kellis and I love web development. I mainly use PHP, TypeScript, Vue but
-                                    I can use any language! I'm ready for the BattleDev 2021, what about you ?
+									<?php if ( ! empty( $profile->description ) ) {
+										echo $profile->description;
+									} else {
+										echo "A lambda DevsAreGenius user";
+									} ?>
                                 </p>
                             </div>
                         </div>
