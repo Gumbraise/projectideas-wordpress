@@ -92,11 +92,12 @@ get_header();
                                         <p class="inline-block"><i
                                                     class="fas fa-comment"></i> <?php echo get_comments_number(); ?></p>
                                         <p class="inline-block"><i
-                                                    class="fas fa-eye"></i> <?php gt_get_post_view(); ?></p>
+                                                    class="fas fa-eye"></i> <?php echo gt_get_post_view(); ?>
+                                        </p>
                                     </div>
                                     <div class="space-x-4 float-right">
                                         <p class="inline-block"><i
-                                                    class="fas fa-clock"></i> <?php echo human_time_diff( strtotime( get_the_date() ), time() ) ?>
+                                                    class="fas fa-clock"></i> <?php echo human_time_diff( get_the_date( 'U' ), time() ) ?>
                                             ago</p>
                                         <p class="inline-block <?php if ( get_field( 'privacy' ) == 'private' ) {
 											echo 'text-yellow-500"><i class="fas fa-lock';
