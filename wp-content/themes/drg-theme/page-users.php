@@ -126,7 +126,7 @@ get_header();
 						$pages = paginate_links( array(
 							'current'   => $paged,
 							'format'    => 'page/%#%',
-							'total'     => $loop2->max_num_pages,
+							'total'     => $loop->max_num_pages,
 							'type'      => 'array',
 							'prev_text' => __( '&lt;', 'drg' ),
 							'next_text' => __( '&gt;', 'drg' ),
@@ -142,7 +142,7 @@ get_header();
                                 <span
                                         class="
                                         <?php
-										if ( ( count( $pages ) == ( $loop2->max_num_pages + 1 ) ) && ( $paged == 1 ) ) {
+										if ( ( count( $pages ) == ( $loop->max_num_pages + 1 ) ) && ( $paged == 1 ) ) {
 											$current_page = $i;
 										} else {
 											$current_page = $i - 1;
