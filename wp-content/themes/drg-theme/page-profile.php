@@ -134,7 +134,9 @@ $iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop->found_posts 
             </div>
             <div class="mt-8">
                 <div class="w-full inline-block">
-                    <h4 class="text-2xl font-semibold inline-block text-left leading-tight">His last ideas:</h4>
+                    <h4 class="text-2xl font-semibold inline-block text-left leading-tight"><?php if ( $profile->ID == get_current_user_id() ) {
+							echo "My";
+						} else echo "His" ?> last ideas:</h4>
                     <a href="/ideas?user=<?php echo $profile->display_name; ?>">
                         <p class="text-lg text-purple-900 font-semibold inline-blockv float-right leading-tight">See
                             more
