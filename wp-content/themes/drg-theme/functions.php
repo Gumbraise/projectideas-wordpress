@@ -135,26 +135,6 @@ add_filter( 'wpseo_remove_reply_to_com', '__return_false' );
 add_theme_support( 'custom-background' );
 add_theme_support( 'custom-header' );
 
-function AcfCustomizerSections() {
-	$panel_id = acf_add_customizer_panel( array(
-		'title' => 'Theme-Options',
-	) );
-
-	acf_add_customizer_section( array(
-		'title'        => 'Basic',
-		'storage_type' => 'option',
-		'panel'        => $panel_id,
-	) );
-
-	acf_add_customizer_section( array(
-		'title'        => 'Advanced',
-		'storage_type' => 'option',
-		'panel'        => $panel_id,
-	) );
-}
-
-add_action( 'init', 'AcfCustomizerSections', 20 );
-
 function excerpt() {
 	$limit = 75;
 
