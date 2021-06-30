@@ -125,7 +125,7 @@ $iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop->found_posts 
                             <div class="w-full lg:w-9/12 px-4">
                                 <p class="mb-4 text-lg leading-relaxed text-gray-800">
 									<?php if ( ! empty( $profile->description ) ) {
-										echo $profile->description;
+										echo htmlspecialchars( $profile->description );
 									} else {
 										echo "A lambda DevsAreGenius user";
 									} ?>
