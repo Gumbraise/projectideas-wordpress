@@ -124,19 +124,40 @@ get_header();
 
 						<?php
 						$pages = paginate_links( array(
-							'current'   => max( 1, get_query_var( 'paged' ) ),
+							'current'   => $paged,
 							'format'    => 'page/%#%',
-							'total'     => $loop->max_num_pages,
+							'total'     => $loop2->max_num_pages,
 							'type'      => 'array',
-							'prev_text' => __( '&laquo;', 'drg' ),
-							'next_text' => __( '&raquo;', 'drg' )
+							'prev_text' => __( '&lt;', 'drg' ),
+							'next_text' => __( '&gt;', 'drg' ),
 						) );
 						if ( is_array( $pages ) ) {
 							echo '
                         <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
                              aria-label="Pagination">';
+							$i = 0;
 							foreach ( $pages as $page ) {
-								echo $page;
+								$i ++;
+								?>
+                                <span
+                                        class="
+                                        <?php
+										if ( ( count( $pages ) == ( $loop2->max_num_pages + 1 ) ) && ( $paged == 1 ) ) {
+											$current_page = $i;
+										} else {
+											$current_page = $i - 1;
+										}
+										if ( $paged == $current_page ) { ?>
+                                            bg-purple-50 border-purple-500 text-purple-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium
+                                        <?php } else { ?>
+                                            bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium
+                                    <?php } ?>
+                                ">
+							<?php
+							echo $page;
+							?>
+                            </span>
+								<?php
 							}
 							echo '</nav>';
 						}
