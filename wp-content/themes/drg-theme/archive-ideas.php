@@ -71,7 +71,7 @@ get_header();
 								     echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
 							     } ?>");'>
                                 <a href="<?php echo get_author_posts_url( get_post_field( 'post_author' ) ); ?>">
-                                    <div class="group-hover:opacity-0 transition duration-200 z-10 bg-white w-8 h-8 sm:w-auto rounded-full absolute m-4 shadow-lg">
+                                    <div class="z-10 bg-white w-8 h-8 sm:w-auto rounded-full absolute m-4 shadow-lg">
                                         <div class="bg-cover bg-center w-6 h-6 rounded-full m-1 inline-block"
                                              style='background-image: url("<?php echo get_avatar_url( get_post_field( 'post_author' ) ); ?>");'>
                                         </div>
