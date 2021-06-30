@@ -50,7 +50,7 @@
                                     <p class="inline-block"><i
                                                 class="fas fa-comment"></i> <?php echo get_comments_number(); ?></p>
                                     <p class="inline-block"><i
-                                                class="fas fa-eye"></i> <?php gt_get_post_view(); ?></p>
+                                                class="fas fa-eye"></i> <?php echo gt_get_post_view(); ?></p>
                                 </div>
                             </div>
                         </div>
