@@ -15,18 +15,38 @@ if ( isset( $_POST['post'] ) ) {
 		'post_type'    => 'ideas',
 		'post_title'   => htmlspecialchars( $_POST['title'] ),
 		'post_content' => htmlspecialchars( $_POST['content'] ),
-		'post_status'  => 'pending',
 	);
 
 	$post_ID = wp_insert_post( $post_data );
 
 	update_field( 'field_60bf39ef56e0f', htmlspecialchars( $_POST['confidentiality'] ), $post_ID );
-	update_field( 'field_60c137a24c2a0', htmlspecialchars( $att['attach_id'] ), $post_ID );
 
+	if ( ! function_exists( 'wp_handle_upload' ) ) {
+		require_once( ABSPATH . 'wp-admin/includes/file.php' );
+	}
+	$uploadedfile     = $_FILES['my_file_field'];
+	$upload_overrides = array( 'test_form' => false );
+	$movefile         = wp_handle_upload( $uploadedfile, $upload_overrides );
+	if ( $movefile ) {
 
-	var_dump( $_POST );
+		$wp_filetype = $movefile['type'];
+		$filename = $movefile['file'];
+		$wp_upload_dir = wp_upload_dir();
+		$attachment = array(
+			'guid' => $wp_upload_dir['url'] . '/' . basename( $filename ),
+			'post_mime_type' => $wp_filetype,
+			'post_title' => preg_replace('/\.[^.]+$/', '', basename($filename)),
+			'post_content' => '',
+			'post_status' => 'inherit'
+		);
+		require_once( ABSPATH . 'wp-admin/includes/image.php' );
+		$attach_id = wp_insert_attachment( $attachment, $filename);
 
-//	header( 'Location: ' . get_permalink( $post_ID ) );
+		set_post_thumbnail($post_ID, $attach_id);
+
+	}
+	
+	header( 'Location: ' . get_permalink( $post_ID ) );
 }
 
 get_header();
@@ -41,7 +61,7 @@ get_header();
                     <div
                             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0"
                     >
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="" name="post" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="action" value="my_file_upload"/>
                             <label for="post-image">
                                 <div class="group bg-gray-200 rounded-t-lg top-0 w-full h-36 bg-center bg-cover relative"
