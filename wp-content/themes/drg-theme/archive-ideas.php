@@ -63,7 +63,7 @@ get_header();
                         <div
                                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
                         >
-                            <div class="bg-gray-200 rounded-t-lg top-0 w-full h-36 bg-center bg-cover relative"
+                            <div class="bg-gray-200 rounded-t-lg top-0 w-full h-36 bg-center bg-cover relative group"
                                  style='background-image: url("<?php
 							     if ( has_post_thumbnail() ) {
 								     the_post_thumbnail_url();
@@ -71,14 +71,14 @@ get_header();
 								     echo get_template_directory_uri() . '/assets/img/scenery/image1.jpg';
 							     } ?>");'>
                                 <a href="<?php echo get_author_posts_url( get_post_field( 'post_author' ) ); ?>">
-                                    <div class="z-10 bg-white w-8 h-8 sm:w-auto rounded-full absolute m-4 shadow-lg">
+                                    <div class="group-hover:opacity-0 transition duration-200 z-10 bg-white w-8 h-8 sm:w-auto rounded-full absolute m-4 shadow-lg">
                                         <div class="bg-cover bg-center w-6 h-6 rounded-full m-1 inline-block"
                                              style='background-image: url("<?php echo get_avatar_url( get_post_field( 'post_author' ) ); ?>");'>
                                         </div>
                                         <p class="hidden md:block float-right py-1 pl-2 pr-4 text-gray-800"><?php echo get_the_author_meta( 'display_name', get_post_field( 'post_author' ) ); ?></p>
                                     </div>
                                 </a>
-                                <span class="relative block w-full h-full opacity-50 bg-black rounded-t-lg"></span>
+                                <span class="relative block w-full h-full opacity-50 group-hover:opacity-0 transition duration-200 bg-black rounded-t-lg"></span>
                             </div>
                             <div class="px-4 py-5 flex-auto relative">
                                 <div class="pb-4">
