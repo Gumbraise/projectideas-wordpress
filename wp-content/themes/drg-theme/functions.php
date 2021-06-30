@@ -159,7 +159,7 @@ function excerpt() {
 	$limit = 75;
 
 	$excerpt = get_the_excerpt();
-	if (strlen($excerpt) >= $limit) {
+	if ( strlen( $excerpt ) >= $limit ) {
 		$excerpt = preg_replace( " ([.*?])", '', $excerpt );
 		$excerpt = strip_shortcodes( $excerpt );
 		$excerpt = strip_tags( $excerpt );
