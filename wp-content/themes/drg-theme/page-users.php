@@ -84,11 +84,11 @@ get_header();
                                 <div class="pb-4">
                                     <h6 class="text-xl font-semibold"><?php echo $user->user_nicename; ?></h6>
                                     <p class="mt-2 mb-4 text-gray-600">
-										<?php if ( get_field( 'description' ) ) {
-											the_field( 'description' );
-										} else {
-											echo "A lambda DevsAreGenius user";
-										} ?>
+	                                    <?php if ( ! empty( $profile->description ) ) {
+		                                    echo $profile->description;
+	                                    } else {
+		                                    echo "A lambda DevsAreGenius user";
+	                                    } ?>
                                     </p>
                                 </div>
                                 <div class="absolute bottom-0 left-0 mb-3 px-4 text-gray-400 w-full">
