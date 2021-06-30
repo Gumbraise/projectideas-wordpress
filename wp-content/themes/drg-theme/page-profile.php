@@ -133,9 +133,11 @@ if ( $profile->ID == get_current_user_id() ) {
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-9/12 px-4">
 								<?php if ( $profile->ID == get_current_user_id() ) { ?>
-                                    <form action="" method="POST">
+                                    <form action="" method="POST" class="space-y-4">
                                         <textarea name="description"
-                                                  class="w-full text-center mb-4 text-lg leading-relaxed text-gray-800 border">
+                                                  class="text-center px-3 py-3 placeholder-purple-300 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring focus:ring-opacity-75 focus:ring-purple-900 w-full"
+                                                  style="transition: all 0.15s ease 0s;"
+                                        >
                                             <?php if ( ! empty( $profile->description ) ) {
 	                                            echo htmlspecialchars( $profile->description );
                                             } else {
@@ -144,8 +146,8 @@ if ( $profile->ID == get_current_user_id() ) {
                                         </textarea>
                                         <button name="edit_profile"
                                                 type="submit"
-                                                class="transition duration-200 bg-purple-900 text-gray-300 hover:bg-purple-700 hover:text-white font-bold py-2 px-8 rounded inline-flex items-center w-full text-center">
-                                            <span class="text-center w-full">Update profile</span>
+                                                class="transition duration-200 bg-purple-900 text-gray-300 hover:bg-purple-700 hover:text-white font-bold py-3 px-8 rounded inline-flex items-center w-full text-center">
+                                            <span class="text-center w-full uppercase">Update profile</span>
                                         </button>
                                     </form>
 								<?php } else { ?>
