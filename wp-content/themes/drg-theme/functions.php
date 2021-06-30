@@ -104,9 +104,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length' );
 function gt_get_post_view() {
 	$count = get_post_meta( get_the_ID(), 'post_views_count', true );
 
-	$count_real = ( $count ) ? $count : 0;
-
-	return $count_real;
+	return $count ? $count : 0;
 }
 
 function gt_set_post_view() {
