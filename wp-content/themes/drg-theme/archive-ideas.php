@@ -166,7 +166,7 @@ get_header();
                 <label for="search-bar" class="relative text-center py-24 md:py-48 space-y-4">
                     <p class="text-3xl font-semibold">No Idea Found</p>
                     <p class="text-xl">Maybe you are tying to find if your idea is here. Go quickly post it via <a
-                                class="evan" href="<?php echo get_home_url(); ?>/post">this page</a>!</p>
+                                class="evan" href="<?php echo home_url( '/post' ); ?>">this page</a>!</p>
                 </label>
 			<?php } ?>
         </div>

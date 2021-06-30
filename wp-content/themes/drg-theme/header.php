@@ -28,7 +28,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
-                <a href="<?php echo get_home_url();?>/">
+                <a href="<?php echo home_url( ); ?>">
                     <span class="sr-only">DevsAreGenius</span>
                     <img class="h-8 w-auto sm:h-10 hidden md:flex"
                          src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_alt.svg'; ?>"
@@ -40,7 +40,7 @@
             </div>
             <div class="-mr-2 -my-2 md:hidden relative">
 	            <?php if ( is_user_logged_in() ): ?>
-                    <a href="<?php echo get_home_url();?>/profile"
+                    <a href="<?php echo home_url( '/profile' ); ?>"
                        class="hover:bg-purple-700 transition duration-100 relative text-white rounded-full text-base font-medium mr-2 mt-1 inline-block float-left">
                         <div class="bg-cover bg-center m-1 w-10 h-10 rounded-full"
                              style='background-image: url("<?php echo get_avatar_url( wp_get_current_user()->ID ) ?>");'>
@@ -89,22 +89,22 @@
 			?>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
 				<?php if ( is_user_logged_in() ): ?>
-                    <a href="<?php echo get_home_url();?>/logout"
+                    <a href="<?php echo home_url( '/logout' ); ?>"
                        class="whitespace-nowrap transition duration-100 inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
                         Logout
                     </a>
-                    <a href="<?php echo get_home_url();?>/profile"
+                    <a href="<?php echo home_url( '/profile' ); ?>"
                        class="hover:bg-purple-700 transition duration-100 relative text-white rounded-full text-base font-medium ml-8">
                         <div class="bg-cover bg-center m-1 w-10 h-10 rounded-full"
                              style='background-image: url("<?php echo get_avatar_url( wp_get_current_user()->ID ) ?>");'>
                         </div>
                     </a>
 				<?php else: ?>
-                    <a href="<?php echo get_home_url();?>/signin"
+                    <a href="<?php echo home_url( '/signin' ); ?>"
                        class="hover:bg-purple-700 transition duration-100 text-white px-3 py-2 rounded-md text-base font-medium">
                         Sign in
                     </a>
-                    <a href="<?php echo get_home_url();?>/signup"
+                    <a href="<?php echo home_url( '/signup' ); ?>"
                        class="ml-8 whitespace-nowrap transition duration-100 inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
                         Sign up
                     </a>
@@ -167,18 +167,18 @@
 				?>
                 <div>
 					<?php if ( is_user_logged_in() ): ?>
-                        <a href="<?php echo get_home_url();?>/logout"
+                        <a href="<?php echo home_url( '/logout' ); ?>"
                            class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
                             Log out of <?php echo wp_get_current_user()->user_login; ?>
                         </a>
 					<?php else: ?>
-                        <a href="<?php echo get_home_url();?>/signup"
+                        <a href="<?php echo home_url( '/signup' ); ?>"
                            class="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-purple-900 hover:bg-purple-700 border-solid border-purple-900 border-2">
                             Sign up
                         </a>
                         <p class="mt-6 text-center text-base font-medium text-gray-300">
                             You already have an account ?
-                            <a href="<?php echo get_home_url();?>/signin" class="text-purple-400 hover:text-purple-300">
+                            <a href="<?php echo home_url( '/signin' ); ?>" class="text-purple-400 hover:text-purple-300">
                                 Sign in
                             </a>
                         </p>
