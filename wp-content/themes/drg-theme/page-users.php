@@ -84,8 +84,8 @@ get_header();
                                 <div class="pb-4">
                                     <h6 class="text-xl font-semibold"><?php echo $user->user_nicename; ?></h6>
                                     <p class="mt-2 mb-4 text-gray-600">
-	                                    <?php if ( ! empty( $profile->description ) ) {
-		                                    echo $profile->description;
+	                                    <?php if ( ! empty( $user->description ) ) {
+		                                    echo $user->description;
 	                                    } else {
 		                                    echo "A lambda DevsAreGenius user";
 	                                    } ?>
