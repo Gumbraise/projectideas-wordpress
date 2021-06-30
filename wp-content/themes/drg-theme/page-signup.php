@@ -147,12 +147,7 @@ echo do_shortcode( '[ultimatemember form_id="49"]' );
                                 </div>
                             </form>
                             <div class="flex flex-wrap mt-6">
-                                <div class="w-1/2">
-                                    <a href="<?php echo home_url( '/forgot-password' ); ?>" class="text-gray-700"
-                                    ><small>Forgot password?</small></a
-                                    >
-                                </div>
-                                <div class="w-1/2 text-right">
+                                <div class="w-full text-center">
                                     <a href="<?php echo home_url( '/signin' ); ?>" class="text-gray-700"
                                     ><small>Sign in to your account</small></a
                                     >
