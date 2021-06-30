@@ -127,6 +127,11 @@ if ( $profile->ID == get_current_user_id() ) {
                         >
 							<?php echo $profile->display_name; ?>
                         </h3>
+						<?php
+						foreach ( $profile->roles as $role ) {
+							echo ucfirst( $role );
+						}
+						?>
                     </div>
                     <div class="mt-10 py-10 border-t border-gray-300 text-center">
                         <div class="flex flex-wrap justify-center">
