@@ -30,8 +30,17 @@ $terms = array(
 $loop = new WP_Query( $terms );
 
 $hours_since = floor( ( time() - strtotime( $profile->user_registered ) ) / 3600 );
-$iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop->found_posts * 20 ) ) * 5 )
+$iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop->found_posts * 20 ) ) * 5 );
 
+
+if ( $profile->ID == get_current_user_id() ) {
+	if ( isset( $_POST['edit_profile'] ) ) {
+		$user_data = wp_update_user( array(
+			'ID'          => $profile->ID,
+			'description' => htmlspecialchars( $_POST['description'] )
+		) );
+	}
+}
 ?>
     <section class="relative block" style="height: 500px;">
         <div
@@ -123,12 +132,32 @@ $iq_profile  = ( $hours_since + ( ( $comment_count * 5 ) + ( $loop->found_posts 
                     <div class="mt-10 py-10 border-t border-gray-300 text-center">
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-9/12 px-4">
-                                <p class="mb-4 text-lg leading-relaxed text-gray-800">
-									<?php if ( ! empty( $profile->description ) ) {
+								<?php if ( $profile->ID == get_current_user_id() ) { ?>
+                                    <form action="" method="POST">
+                                        <textarea name="description"
+                                                  class="w-full text-center mb-4 text-lg leading-relaxed text-gray-800 border">
+                                            <?php if ( ! empty( $profile->description ) ) {
+	                                            echo htmlspecialchars( $profile->description );
+                                            } else {
+	                                            echo "A lambda DevsAreGenius user";
+                                            } ?>
+                                        </textarea>
+                                        <button name="edit_profile"
+                                                type="submit"
+                                                class="transition duration-200 bg-purple-900 text-gray-300 hover:bg-purple-700 hover:text-white font-bold py-2 px-8 rounded inline-flex items-center w-full text-center">
+                                            <span class="text-center w-full">Update profile</span>
+                                        </button>
+                                    </form>
+								<?php } else { ?>
+                                <p class="mb-4 text-lg leading-relaxed text-gray-800 w-full">
+									<?php
+									if ( ! empty( $profile->description ) ) {
 										echo htmlspecialchars( $profile->description );
 									} else {
 										echo "A lambda DevsAreGenius user";
-									} ?>
+									}
+									}
+									?>
                                 </p>
                             </div>
                         </div>
