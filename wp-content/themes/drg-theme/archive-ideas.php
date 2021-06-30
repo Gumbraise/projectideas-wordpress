@@ -129,15 +129,28 @@ get_header();
 							'format'    => 'page/%#%',
 							'total'     => $loop->max_num_pages,
 							'type'      => 'array',
-							'prev_text' => __( '&laquo;', 'drg' ),
-							'next_text' => __( '&raquo;', 'drg' )
+							'prev_text' => __( '&lt;', 'drg' ),
+							'next_text' => __( '&gt;', 'drg' )
 						) );
 						if ( is_array( $pages ) ) {
 							echo '
                         <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
                              aria-label="Pagination">';
 							foreach ( $pages as $page ) {
-								echo $page;
+								?>
+                                <span
+                                        class="
+                                        <?php if ( 1 == $paged ) { ?>
+                                            bg-purple-50 border-purple-500 text-purple-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium
+                                        <?php } else { ?>
+                                            bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium
+                                    <?php } ?>
+                                ">
+									<?php
+									echo $page;
+									?>
+                                </span>
+								<?php
 							}
 							echo '</nav>';
 
