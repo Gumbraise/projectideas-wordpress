@@ -12,16 +12,16 @@ endif;
 
 get_header();
 
-echo do_shortcode('[ultimatemember form_id="49"]');
+echo do_shortcode( '[ultimatemember form_id="49"]' );
 ?>
     <section class="relative w-full h-screen flex content-center items-center justify-center" style="min-height: 75vh;">
         <div
                 class="absolute top-0 w-full h-full bg-center bg-cover"
                 style="background-image: url("<?php echo get_background_image(); ?>");"
-        >          <span
-                    id="blackOverlay"
-                    class="w-full h-full absolute opacity-50 bg-black"
-            ></span>
+        > <span
+                id="blackOverlay"
+                class="w-full h-full absolute opacity-50 bg-black"
+        ></span>
         </div>
         <div class="container mx-auto px-4 h-full">
             <div class="flex content-center items-center justify-center h-full">
@@ -105,7 +105,8 @@ echo do_shortcode('[ultimatemember form_id="49"]');
                                             style="transition: all 0.15s ease 0s;"
                                             required
                                     />
-                                    <p class="text-red-700 text-xs pt-2">* Choose a password with at least a lower char, an upper char and a number.</p>
+                                    <p class="text-red-700 text-xs pt-2">* Choose a password with at least a lower char,
+                                        an upper char and a number.</p>
                                 </div>
                                 <label
                                         class="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -133,6 +134,9 @@ echo do_shortcode('[ultimatemember form_id="49"]');
                                        size="25" autocomplete="off">
                                 <input type="hidden" id="_wpnonce" name="_wpnonce" value="1b196da5f6"><input
                                         type="hidden" name="_wp_http_referer" value="/signup/">
+                                <input type="checkbox" id="RGDP" name="RGDP" required>
+                                <label class="uppercase text-gray-700 text-xs font-bold mb-2"
+                                       for="RGDP">*I read and I accept the RGDP</label>
                                 <div class="text-center mt-6">
                                     <input type="submit"
                                            value="Sign up"
@@ -142,12 +146,12 @@ echo do_shortcode('[ultimatemember form_id="49"]');
                             </form>
                             <div class="flex flex-wrap mt-6">
                                 <div class="w-1/2">
-                                    <a href="<?php echo get_home_url(); ?>/forgot-password" class="text-gray-700"
+                                    <a href="<?php echo home_url( ' /forgot-password ' ); ?>" class="text-gray-700"
                                     ><small>Forgot password?</small></a
                                     >
                                 </div>
                                 <div class="w-1/2 text-right">
-                                    <a href="<?php echo get_home_url(); ?>/signin" class="text-gray-700"
+                                    <a href="<?php echo home_url( ' /signin ' ); ?>" class="text-gray-700"
                                     ><small>Sign in to your account</small></a
                                     >
                                 </div>
