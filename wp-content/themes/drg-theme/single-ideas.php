@@ -63,7 +63,7 @@ $a_id = $post->post_author;
                         </h3>
                         <div class="mb-2 text-gray-700 mt-4">
                             <i class="fas fa-user mr-2 text-lg text-gray-500"></i
-                            ><a href="<?php echo home_url( 'profile/' . get_the_author_meta( 'user_nicename', $a_id )); ?>"><?php
+                            ><a href="<?php echo home_url( 'profile/' . get_the_author_meta( 'user_nicename', $a_id ) ); ?>"><?php
 								the_author_meta( 'user_nicename', $a_id ); ?></a>
                         </div>
                         <div class="mb-2 text-gray-700">
@@ -74,10 +74,16 @@ $a_id = $post->post_author;
                     <div class="mt-10 py-10 border-t border-gray-300 text-center">
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full lg:w-9/12 px-4 relative">
-                                <div class="z-10 absolute w-full h-full block bg-gradient-to-b from-transparent via-white to-white"></div>
-                                <p class="mb-4 text-lg leading-relaxed text-gray-800 relative">
-									<?php if ( get_field( 'privacy' ) != 'private' ) { echo htmlspecialchars( get_the_content() ); } else echo htmlspecialchars( get_the_excerpt() ); ?>
-                                </p>
+								<?php if ( get_field( 'privacy' ) == 'private' ) { ?>
+                                    <div class="z-10 absolute w-full h-full block bg-gradient-to-b from-transparent via-white to-white"></div>
+                                    <p class="mb-4 text-lg leading-relaxed text-gray-800 relative">
+										<?php echo htmlspecialchars( get_the_excerpt() ); ?>
+                                    </p>
+								<?php } else { ?>
+                                    <p class="mb-4 text-lg leading-relaxed text-gray-800 relative">
+										<?php echo htmlspecialchars( get_the_content() ); ?>
+                                    </p>
+								<?php } ?>
                             </div>
                         </div>
                         <div class="text-center space-x-2">
