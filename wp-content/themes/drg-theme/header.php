@@ -12,6 +12,8 @@
  * @version 1.0
  */
 
+$image = get_field('image', wp_get_nav_menu_object(2));
+$image_responsive = get_field('image_responsive', wp_get_nav_menu_object(2));
 ?>
 
 <!DOCTYPE html>
@@ -31,11 +33,11 @@
                 <a href="<?php echo home_url( ); ?>">
                     <span class="sr-only">DevsAreGenius</span>
                     <img class="h-8 w-auto sm:h-10 hidden md:flex"
-                         src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_header_alt.svg'; ?>"
-                         alt="DevsAreGenius Logotype">
+                         src="<?php echo $image['url']; ?>"
+                         alt="<?php echo $image['alt']; ?>">
                     <img class="h-8 w-auto sm:h-10 flex md:hidden"
-                         src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_logo.svg'; ?>"
-                         alt="DevsAreGenius Mark">
+                         src="<?php echo $image_responsive['url']; ?>"
+                         alt="<?php echo $image_responsive['alt']; ?>">
                 </a>
             </div>
             <div class="-mr-2 -my-2 md:hidden relative">
@@ -119,8 +121,8 @@
                 <div class="flex items-center justify-between">
                     <div>
                         <img class="h-8 w-auto"
-                             src="<?php echo get_template_directory_uri() . '/assets/img/tech/drg_logo.svg'; ?>"
-                             alt="DevsAreGenius Mark">
+                             src="<?php echo $image_responsive['url']; ?>"
+                             alt="<?php echo $image_responsive['alt']; ?>">
                     </div>
                     <div class="-mr-2">
                         <button onclick="toggleNavbar('md');"

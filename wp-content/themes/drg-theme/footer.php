@@ -4,6 +4,8 @@ $terms = array(
 	'order'     => 'ASC'
 );
 $loop  = new WP_Query( $terms );
+
+$image = get_field('image', wp_get_nav_menu_object(3));
 ?>
 </main>
 
@@ -12,10 +14,10 @@ $loop  = new WP_Query( $terms );
         <div class="flex flex-wrap">
             <div class="w-full lg:w-6/12 px-4">
                 <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
-                <img src="<?php echo get_header_image(); ?>"
-                     alt="DevsAreGenius Footer Logo" class="w-72 mb-4">
+                <img src="<?php echo $image['url']; ?>"
+                     alt="<?php echo $image['alt']; ?>" class="w-72 mb-4">
                 <h5 class="text-lg mt-0 mb-2 text-gray-700">
-	                <?php bloginfo( 'description' ); ?>
+					<?php bloginfo( 'description' ); ?>
                 </h5>
                 <div class="my-6">
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
