@@ -19,9 +19,9 @@ echo do_shortcode( '[ultimatemember form_id="49"]' );
                 class="absolute top-0 w-full h-full bg-center bg-cover"
                 style="background-image: url(<?php echo get_background_image(); ?>);"
         > <span
-                id="blackOverlay"
-                class="w-full h-full absolute opacity-50 bg-black"
-        ></span>
+                    id="blackOverlay"
+                    class="w-full h-full absolute opacity-50 bg-black"
+            ></span>
         </div>
         <div class="container mx-auto px-4 h-full">
             <div class="flex content-center items-center justify-center h-full">
@@ -146,12 +146,12 @@ echo do_shortcode( '[ultimatemember form_id="49"]' );
                             </form>
                             <div class="flex flex-wrap mt-6">
                                 <div class="w-1/2">
-                                    <a href="<?php echo home_url( ' /forgot-password ' ); ?>" class="text-gray-700"
+                                    <a href="<?php echo home_url( '/forgot-password' ); ?>" class="text-gray-700"
                                     ><small>Forgot password?</small></a
                                     >
                                 </div>
                                 <div class="w-1/2 text-right">
-                                    <a href="<?php echo home_url( ' /signin ' ); ?>" class="text-gray-700"
+                                    <a href="<?php echo home_url( '/signin' ); ?>" class="text-gray-700"
                                     ><small>Sign in to your account</small></a
                                     >
                                 </div>
