@@ -77,7 +77,7 @@ $a_id = $post->post_author;
 								<?php if ( get_field( 'privacy' ) == 'private' ) { ?>
                                     <div class="z-10 absolute w-full h-full block bg-gradient-to-b from-transparent via-white to-white"></div>
                                     <p class="mb-4 text-lg leading-relaxed text-gray-800 relative">
-										<?php echo htmlspecialchars( get_the_excerpt() ); ?>
+										<?php echo htmlspecialchars( excerpt() ); ?>
                                     </p>
 								<?php } else { ?>
                                     <p class="mb-4 text-lg leading-relaxed text-gray-800 relative">

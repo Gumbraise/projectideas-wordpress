@@ -84,7 +84,7 @@ get_header();
                                 <div class="pb-4">
                                     <h6 class="text-xl font-semibold"><?php the_title(); ?></h6>
                                     <p class="mt-2 mb-4 text-gray-600">
-										<?php echo get_the_excerpt(); ?>
+										<?php echo htmlspecialchars( excerpt() ); ?>
                                     </p>
                                 </div>
                                 <div class="absolute bottom-0 left-0 mb-3 px-4 text-gray-400 w-full">
