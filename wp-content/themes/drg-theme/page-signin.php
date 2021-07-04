@@ -14,7 +14,7 @@ get_header();
 
 $image = get_field('image');
 
-echo do_shortcode( '[ultimatemember form_id="49"]' );
+echo do_shortcode( '[ultimatemember form_id="50"]' );
 ?>
     <section class="relative w-full h-screen flex content-center items-center justify-center" style="min-height: 75vh;">
         <div
